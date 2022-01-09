@@ -1,0 +1,43 @@
+{
+  "Print to console": {
+    "scope": "javascript,typescript",
+    "prefix": "log",
+    "body": ["console.log('$1')"],
+    "description": "Log output to console"
+  },
+  "Functional Component": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "nextfc",
+    "body": [
+      "import { Box, Text } from '@chakra-ui/react'",
+      "",
+      "export const $1: React.FunctionComponent = props => {",
+      "  return (",
+      "    <Box>",
+      "      <Text>$1</Text>",
+      "    </Box>",
+      "  )",
+      "}"
+    ]
+  },
+  "Re-usable Component": {
+    "scope": "javascript,typescript,typescriptreact",
+    "prefix": "nextc",
+    "body": [
+      "import { Box, Text } from '@chakra-ui/react'",
+      "import { ComponentProps } from '../../types/ComponentProps'",
+      "",
+      "interface IP$1 extends ComponentProps {",
+      "",
+      "}",
+      "",
+      "export const $1: React.FunctionComponent<IP$1> = props => {",
+      "  return (",
+      "    <Box>",
+      "      <Text>$1</Text>",
+      "    </Box>",
+      "  )",
+      "}"
+    ]
+  }
+}
