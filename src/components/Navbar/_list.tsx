@@ -18,10 +18,10 @@ export const NAV_ITEMS: Array<NavItem> = [
     label: 'Projects',
     path: '#',
   },
-  {
-    label: 'Blog',
-    path: '#',
-  },
+  // {
+  //   label: 'Blog',
+  //   path: '#',
+  // },
   {
     label: 'Contact',
     path: '#',

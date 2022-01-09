@@ -7,10 +7,6 @@ import {
   useColorMode,
   useDisclosure,
   IconButton,
-  Collapse,
-  Stack,
-  Icon,
-  ScaleFade,
   Menu,
   MenuButton,
   MenuList,
@@ -20,6 +16,7 @@ import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRi
 import Link from 'next/link'
 
 import { useRouter } from 'next/router'
+import { useColors } from '@utils/hooks/colors'
 import { ComponentProps } from '@type/ComponentProps'
 import { NAV_ITEMS, NavItem } from './_list'
 
@@ -29,11 +26,7 @@ export const Navbar: React.FunctionComponent<IPNavbar> = props => {
   const router = useRouter()
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onToggle } = useDisclosure()
-
-  const defaultLinkColor = useColorModeValue('gray.600', 'white')
-  const activeLinkColor = useColorModeValue('orange.400', 'orange.200')
-  const defaultLightAndDark = useColorModeValue('Light', 'Dark')
-  const hoverColor = useColorModeValue('orange.400', 'orange.200')
+  const { defaultLinkColor, defaultLightAndDark, activeAndHoverColor } = useColors()
 
   return (
     <>
@@ -75,9 +68,9 @@ export const Navbar: React.FunctionComponent<IPNavbar> = props => {
                       paddingLeft: 5,
                       paddingRight: 5,
                       fontSize: 16,
-                      color: router?.asPath === item.path ? activeLinkColor : defaultLinkColor,
+                      color: router?.asPath === item.path ? activeAndHoverColor : defaultLinkColor,
                     }}
-                    _hover={{ color: hoverColor }}>
+                    _hover={{ color: activeAndHoverColor }}>
                     {item?.label || '-'}
                   </Text>
                 </Link>

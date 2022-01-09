@@ -3,9 +3,11 @@ import { Navbar } from '@components/Navbar'
 import Image from 'next/image'
 import NextLink from 'next/link'
 
+import { useColors } from '@app/utils/hooks/colors'
 import { ComponentProps } from '@app/types/ComponentProps'
 
 const Landing: React.FunctionComponent = props => {
+  const { activeAndHoverColor } = useColors()
   return (
     <Box height={{ md: '100vh' }}>
       <Navbar />
@@ -29,21 +31,22 @@ const Landing: React.FunctionComponent = props => {
                     height={'54px'}
                     marginTop={8}
                     bg={useColorModeValue('black', 'white')}
-                    _hover={{ bg: 'orange.400', color: 'black' }}>
+                    _hover={{ bg: activeAndHoverColor, color: 'black' }}>
                     <Text color={useColorModeValue('white', 'black')}>Contact Me</Text>
                   </Button>
                 </Link>
               </NextLink>
             </Flex>
-            <Image alt="mrizkiaiman-avatar" src={'/images/avatar-full.png'} width={550} height={550} />
+            <Image alt="mrizkiaiman-avatar" src={'/images/avatar-full.webp'} width={550} height={550} />
           </Flex>
         </Center>
+        {/* TOOLS */}
         <Center flexDirection={'column'}>
           <Text
             fontSize={18}
             fontWeight={'900'}
             letterSpacing={-1}
-            color={useColorModeValue('gray.500', 'white')}
+            color={useColorModeValue('black', 'white')}
             paddingBottom={3}>
             TOOLS
           </Text>
@@ -82,7 +85,12 @@ const Landing: React.FunctionComponent = props => {
 export default Landing
 
 const Title = (props: ComponentProps) => (
-  <Text style={{ letterSpacing: -3.2, fontWeight: 'bold', fontSize: 48, ...props?.style }}>{props.children}</Text>
+  <Text
+    style={{ fontWeight: 'bold', ...props?.style }}
+    fontSize={{ base: 28, md: 48 }}
+    letterSpacing={{ base: -1.5, md: -3.2 }}>
+    {props.children}
+  </Text>
 )
 
 const ToolsWrapper = (props: ComponentProps) => (
