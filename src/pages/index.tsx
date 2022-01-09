@@ -9,9 +9,8 @@ const Home: NextPage = () => {
   return (
     <div>
       <Head>
-        <html lang="en" />
         <title>M. Rizki Aiman</title>
-        <meta name="description" content="Software Engineer and Notion Creator" />
+        <meta lang="en" name="description" content="Software Engineer and Notion Creator" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Landing />
