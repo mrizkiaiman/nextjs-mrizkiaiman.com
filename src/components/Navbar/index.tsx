@@ -30,6 +30,11 @@ export const Navbar: React.FunctionComponent<IPNavbar> = props => {
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onToggle } = useDisclosure()
 
+  const defaultLinkColor = useColorModeValue('gray.600', 'white')
+  const activeLinkColor = useColorModeValue('orange.400', 'orange.200')
+  const defaultLightAndDark = useColorModeValue('Light', 'Dark')
+  const hoverColor = useColorModeValue('orange.400', 'orange.200')
+
   return (
     <>
       <Box
@@ -51,7 +56,7 @@ export const Navbar: React.FunctionComponent<IPNavbar> = props => {
               </MenuButton>
               <MenuList>
                 {NAV_ITEMS.map((item, index) => (
-                  <Link key={item.label} href={item.path}>
+                  <Link key={item.label} href={item.path} passHref>
                     <MenuItem>{item.label}</MenuItem>
                   </Link>
                 ))}
@@ -62,21 +67,17 @@ export const Navbar: React.FunctionComponent<IPNavbar> = props => {
           <Flex display={{ base: 'none', md: 'flex' }} pt={5} pb={5}>
             {NAV_ITEMS.map((item: NavItem, index: number) => {
               return (
-                <Link href={item.path}>
+                <Link href={item.path} key={item?.label || index} passHref>
                   <Text
-                    key={item?.label || index}
                     sx={{
                       cursor: 'pointer',
                       fontWeight: '600',
                       paddingLeft: 5,
                       paddingRight: 5,
                       fontSize: 16,
-                      color:
-                        router?.asPath === item.path
-                          ? useColorModeValue('orange.400', 'orange.200')
-                          : useColorModeValue('gray.600', 'white'),
+                      color: router?.asPath === item.path ? activeLinkColor : defaultLinkColor,
                     }}
-                    _hover={{ color: useColorModeValue('orange.400', 'orange.200') }}>
+                    _hover={{ color: hoverColor }}>
                     {item?.label || '-'}
                   </Text>
                 </Link>
@@ -84,7 +85,7 @@ export const Navbar: React.FunctionComponent<IPNavbar> = props => {
             })}
           </Flex>
           <Flex sx={{ paddingTop: 3 }}>
-            <Button bg={useColorModeValue('Light', 'Dark')} onClick={toggleColorMode}>
+            <Button bg={defaultLightAndDark} onClick={toggleColorMode}>
               {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
             </Button>
           </Flex>

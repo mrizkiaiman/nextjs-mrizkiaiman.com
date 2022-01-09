@@ -20,7 +20,7 @@ const Landing: React.FunctionComponent = props => {
               <Title>Software Engineer</Title>
               <Title style={{ marginTop: -12 }}>Notion Creator</Title>
               <Text width={{ md: 500 }} paddingTop={4} fontWeight={500} fontSize={18} letterSpacing={-0.5}>
-                I'm excited helping you to improve your business by building a web, mobile app and productivity system.
+                {`I'm excited helping you to improve your business by building a web, mobile app and productivity system.`}
               </Text>
               <NextLink href={'https://www.linkedin.com/in/mrizkiaiman/'} passHref>
                 <Link style={{ textDecoration: 'none' }} isExternal>
@@ -35,7 +35,7 @@ const Landing: React.FunctionComponent = props => {
                 </Link>
               </NextLink>
             </Flex>
-            <Image src={'/images/avatar-full.png'} width={550} height={550} />
+            <Image alt="mrizkiaiman-avatar" src={'/images/avatar-full.png'} width={550} height={550} />
           </Flex>
         </Center>
         <Center flexDirection={'column'}>
@@ -50,24 +50,24 @@ const Landing: React.FunctionComponent = props => {
           <Flex>
             <ToolsWrapper>
               <Center bg={'white'} padding={0.5} borderRadius={100}>
-                <Image src={'/images/tools/nextjs.png'} width={50} height={50} layout="fixed" />
+                <Image alt="next-js" src={'/images/tools/nextjs.png'} width={50} height={50} layout="fixed" />
               </Center>
               <ToolsLabel>Next JS</ToolsLabel>
             </ToolsWrapper>
             <ToolsWrapper>
-              <Image src={'/images/tools/react.png'} width={52} height={50} layout="fixed" />
+              <Image alt="react" src={'/images/tools/react.png'} width={52} height={50} layout="fixed" />
               <Box pt={{ base: 1, sm: 1, md: 0 }}>
                 <ToolsLabel>React</ToolsLabel>
               </Box>
             </ToolsWrapper>
             <ToolsWrapper>
               <Center bg={'white'} padding={0.5} borderRadius={100}>
-                <Image src={'/images/tools/expo.png'} width={50} height={50} layout="fixed" />
+                <Image alt="expo-react-native" src={'/images/tools/expo.png'} width={50} height={50} layout="fixed" />
               </Center>
               <ToolsLabel>Expo</ToolsLabel>
             </ToolsWrapper>
             <ToolsWrapper>
-              <Image src={'/images/tools/notion.png'} width={50} height={50} layout="fixed" />
+              <Image alt="notion" src={'/images/tools/notion.png'} width={50} height={50} layout="fixed" />
               <Box pt={{ base: 1, sm: 1, md: 0 }}>
                 <ToolsLabel>Notion</ToolsLabel>
               </Box>
