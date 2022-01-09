@@ -1,6 +1,5 @@
 import '../styles/globals.css'
 import '@fontsource/inter'
-import '@fontsource/open-sans'
 import type { AppProps } from 'next/app'
 
 import { ChakraProvider } from '@chakra-ui/react'
