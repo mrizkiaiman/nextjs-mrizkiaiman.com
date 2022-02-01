@@ -53,7 +53,7 @@ const Landing: React.FunctionComponent = props => {
           </Text>
           <Flex>
             {TOOLS.map((tool, index) => (
-              <ToolsWrapper>
+              <ToolsWrapper key={tool.label}>
                 {tool.whiteBorder ? (
                   <Center bg={'white'} padding={0.5} borderRadius={100}>
                     <Image alt={tool.label} src={tool.img} width={50} height={50} layout="fixed" />
