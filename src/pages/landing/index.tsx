@@ -75,7 +75,7 @@ export default Landing
 
 const Title = (props: ComponentProps) => (
   <Text
-    style={{ fontWeight: 'bold', ...props?.style }}
+    style={{ fontWeight: 'bolder', ...props?.style }}
     fontSize={{ base: 28, md: 48 }}
     letterSpacing={{ base: -1.5, md: -3.2 }}>
     {props.children}
