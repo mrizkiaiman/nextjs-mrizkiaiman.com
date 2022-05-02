@@ -47,7 +47,6 @@ const About: React.FunctionComponent = props => {
           </Flex>
         </Center>
       </Flex>
-
       <Flex marginLeft={{ base: 4, md: '28vh' }} marginRight={{ base: 4, md: '28vh' }} direction={'column'}>
         <Subtitle>Values</Subtitle>
         <Flex direction={{ base: 'column', md: 'row' }} marginTop={3} justifyContent={'space-between'}>
@@ -71,7 +70,6 @@ const About: React.FunctionComponent = props => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
           est laborum
         </Text>
-
         <Subtitle>Experience</Subtitle>
         <Text textAlign={'justify'} marginTop={3}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut l abore et dolore
@@ -88,7 +86,6 @@ const About: React.FunctionComponent = props => {
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
           est laborum
         </Text>
-        {/* Footer */}
         <Subtitle>Get in touch</Subtitle>
         <Text textAlign={'justify'} marginTop={3} marginBottom={24}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut l abore et dolore
