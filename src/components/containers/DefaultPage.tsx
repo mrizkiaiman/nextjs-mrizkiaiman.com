@@ -1,5 +1,5 @@
 import { FCProps } from '@app/types/FCProps'
-import { Navbar } from '@components/navbar'
+import { Navbar } from '@components/navbar/index'
 import { Flex, Box } from '@chakra-ui/react'
 
 import Head from 'next/head'
