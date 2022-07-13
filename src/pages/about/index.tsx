@@ -19,7 +19,7 @@ export const About: React.FC = props => {
         direction={{ base: 'column', md: 'row' }}
         alignItems={'center'}
         justifyContent={{ base: 'center', md: 'space-between' }}>
-        <Image alt="mrizkiaiman-avatar" src={AVATAR_WITH_LAPTOP} width={600} height={600} />
+        <Image alt="mrizkiaiman-avatar" src={AVATAR_WITH_LAPTOP} width={550} height={550} />
         <Flex direction={'column'} width={{ base: '90%', md: '45%' }} marginLeft={{ md: -8 }}>
           <Text fontWeight={'bold'} fontSize={{ base: 28, md: 54 }} letterSpacing={-1.5}>
             M. Rizki Aiman
@@ -47,7 +47,7 @@ export const About: React.FC = props => {
       <Center>
         <Flex width={'80%'} direction={'column'} marginLeft={{ base: 4 }} marginRight={{ base: 4 }}>
           <Section title="Work">
-            <Text fontSize={{ base: 16, md: 20 }} textAlign={'justify'} style={{ textIndent: '1em' }} pt={5}>
+            <Text fontSize={{ base: 16, md: 18 }} textAlign={'justify'} style={{ textIndent: '1em' }} pt={5}>
               Rizki is a full-stack developer and a Notion creator based in Jakarta with a passion for building digital services and
               products. He has different tooling-skills for solving real-life problems, either with Notion templates or code. Outside of his
               profession, he loves spending time with his kindle, playing games, hangout with family and friends, and study about anything.
@@ -66,19 +66,19 @@ export const About: React.FC = props => {
           </Section>
           <Section title="Interests">
             <UnorderedList pt={5}>
-              <ListItem mt={2} fontSize={{ base: 16, md: 20 }}>
+              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
                 Reading (Health, self-help, and other non-fiction books)
               </ListItem>
-              <ListItem mt={2} fontSize={{ base: 16, md: 20 }}>
+              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
                 Anime & Manga
               </ListItem>
-              <ListItem mt={2} fontSize={{ base: 16, md: 20 }}>
+              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
                 Games (YGO Master Duel & Mobile Legends)
               </ListItem>
-              <ListItem mt={2} fontSize={{ base: 16, md: 20 }}>
+              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
                 Writing
               </ListItem>
-              <ListItem mt={2} fontSize={{ base: 16, md: 20 }}>
+              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
                 Notion enthusiast
               </ListItem>
             </UnorderedList>
@@ -90,7 +90,7 @@ export const About: React.FC = props => {
                 <Flex alignItems={'center'} mt={2}>
                   <AiOutlineLinkedin color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={LINKED_IN} rel="noopener noreferrer">
-                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 24 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 20 }} color={activeAndHoverColor} cursor="pointer">
                       Muhammad Rizki Aiman
                     </Text>
                   </a>
@@ -98,7 +98,7 @@ export const About: React.FC = props => {
                 <Flex alignItems={'center'} mt={5}>
                   <AiOutlineGithub color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={GITHUB} rel="noopener noreferrer">
-                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 24 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 20 }} color={activeAndHoverColor} cursor="pointer">
                       mrizkiaiman
                     </Text>
                   </a>
@@ -106,7 +106,7 @@ export const About: React.FC = props => {
                 <Flex alignItems={'center'} mt={5}>
                   <AiOutlineTwitter color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={TWITTER} rel="noopener noreferrer">
-                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 24 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 20 }} color={activeAndHoverColor} cursor="pointer">
                       mrizkiaiman
                     </Text>
                   </a>
@@ -114,7 +114,7 @@ export const About: React.FC = props => {
                 <Flex alignItems={'center'} mt={5}>
                   <AiOutlineInstagram color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={INSTAGRAM} rel="noopener noreferrer">
-                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 24 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 20 }} color={activeAndHoverColor} cursor="pointer">
                       mrizkiaiman
                     </Text>
                   </a>

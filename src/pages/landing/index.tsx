@@ -49,7 +49,7 @@ const Landing: React.FC = props => {
             </NextLink>
           </Flex>
           <Box marginRight={{ md: -40 }}>
-            <Image alt="mrizkiaiman-avatar" src={AVATAR} width={650} height={650} />
+            <Image alt="mrizkiaiman-avatar" src={AVATAR} width={550} height={550} />
           </Box>
         </Flex>
         {/* TOOLS */}
