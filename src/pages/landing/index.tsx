@@ -1,59 +1,65 @@
-import { Box, Container, Button, Center, Flex, Text, useColorModeValue, Link, Avatar } from '@chakra-ui/react'
-import { Navbar } from '@components/Navbar'
+import { Button, Center, Flex, Text, useColorModeValue, Link, Box } from '@chakra-ui/react'
+import { DefaultPage } from '@app/components/containers/DefaultPage'
 import Image from 'next/image'
 import NextLink from 'next/link'
-import { CONTACT_ME, AVATAR, TOOLS, SLOGAN } from '@app/_config'
+import { LINKED_IN, AVATAR, TOOLS, SLOGAN } from '@app/_config'
 
 import { useColors } from '@app/utils/hooks/colors'
-import { ComponentProps } from '@app/types/ComponentProps'
 
-const Landing: React.FunctionComponent = props => {
+const Landing: React.FC = props => {
   const { activeAndHoverColor } = useColors()
   return (
-    <Box height={{ md: '100vh' }}>
-      <Navbar />
-      <Flex flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
-        <Center>
+    <DefaultPage headTitle="M. Rizki Aiman">
+      <Flex paddingTop={{ base: 12, md: 0 }} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
+        <Flex
+          p={{ base: 4 }}
+          direction={{ base: 'column', md: 'row' }}
+          alignItems={'center'}
+          justifyContent={{ base: 'center', md: 'space-between' }}>
           <Flex
-            p={{ base: 4 }}
-            direction={{ base: 'column', md: 'row' }}
-            alignItems={'center'}
-            justifyContent={{ md: 'space-between', base: 'center' }}>
-            <Flex direction={'column'}>
-              <Title>Software Engineer</Title>
-              <Title style={{ marginTop: -12 }}>Notion Creator</Title>
-              <Text width={{ md: 500 }} paddingTop={4} fontWeight={500} fontSize={18} letterSpacing={-0.5}>
-                {SLOGAN}
-              </Text>
-              <NextLink href={CONTACT_ME} passHref>
-                <Link style={{ textDecoration: 'none' }} isExternal>
-                  <Button
-                    width={{ base: '90%', md: '300px' }}
-                    height={'54px'}
-                    marginTop={8}
-                    bg={useColorModeValue('black', 'white')}
-                    _hover={{ bg: activeAndHoverColor, color: 'black' }}>
-                    <Text color={useColorModeValue('white', 'black')}>Contact Me</Text>
-                  </Button>
-                </Link>
-              </NextLink>
-            </Flex>
-            <Image alt="mrizkiaiman-avatar" src={AVATAR} width={550} height={550} />
+            direction={'column'}
+            width={{ md: '50%' }}
+            justifyContent={{ base: 'center', md: 'flex-start' }}
+            alignItems={{ base: 'center', md: 'flex-start' }}>
+            <Text fontWeight={'bold'} fontSize={{ base: 28, md: 54 }} letterSpacing={{ base: -1.5, md: -1.8 }}>
+              M. Rizki Aiman
+            </Text>
+            <Text
+              width={{ md: 450 }}
+              paddingTop={4}
+              fontWeight={500}
+              fontSize={{ base: 18, md: 24 }}
+              letterSpacing={-0.5}
+              textAlign={{ base: 'center', md: 'left' }}>
+              {SLOGAN}
+            </Text>
+            <NextLink href={LINKED_IN} passHref>
+              <Link style={{ textDecoration: 'none' }} isExternal>
+                <Button
+                  width={{ base: '180px', md: '220px' }}
+                  height={'54px'}
+                  marginTop={8}
+                  fontWeight={'bold'}
+                  fontSize={16}
+                  bg={useColorModeValue('black', 'white')}
+                  _hover={{ bg: activeAndHoverColor, color: 'black' }}>
+                  <Text color={useColorModeValue('white', 'black')}>Contact Me</Text>
+                </Button>
+              </Link>
+            </NextLink>
           </Flex>
-        </Center>
+          <Box marginRight={{ md: -40 }}>
+            <Image alt="mrizkiaiman-avatar" src={AVATAR} width={650} height={650} />
+          </Box>
+        </Flex>
         {/* TOOLS */}
         <Center flexDirection={'column'}>
-          <Text
-            fontSize={18}
-            fontWeight={'900'}
-            letterSpacing={-1}
-            color={useColorModeValue('black', 'white')}
-            paddingBottom={3}>
+          <Text fontSize={18} fontWeight={'900'} letterSpacing={-1} color={useColorModeValue('black', 'white')} paddingBottom={3}>
             TOOLS
           </Text>
           <Flex>
             {TOOLS.map((tool, index) => (
-              <ToolsWrapper key={tool.label}>
+              <Flex alignItems={'center'} direction={{ base: 'column', md: 'row' }} padding={4} key={tool.label}>
                 {tool.whiteBorder ? (
                   <Center bg={'white'} padding={0.5} borderRadius={100}>
                     <Image alt={tool.label} src={tool.img} width={50} height={50} layout="fixed" />
@@ -61,40 +67,21 @@ const Landing: React.FunctionComponent = props => {
                 ) : (
                   <Image alt={tool.label} src={tool.img} width={50} height={50} layout="fixed" />
                 )}
-                <ToolsLabel>{tool.label}</ToolsLabel>
-              </ToolsWrapper>
+                <Text
+                  paddingLeft={{ md: 3 }}
+                  paddingTop={{ base: 2 }}
+                  fontWeight={'bold'}
+                  fontSize={{ base: 12, md: 20 }}
+                  letterSpacing={-1}>
+                  {tool.label}
+                </Text>
+              </Flex>
             ))}
           </Flex>
         </Center>
       </Flex>
-    </Box>
+    </DefaultPage>
   )
 }
 
 export default Landing
-
-const Title = (props: ComponentProps) => (
-  <Text
-    style={{ fontWeight: 'bolder', ...props?.style }}
-    fontSize={{ base: 28, md: 48 }}
-    letterSpacing={{ base: -1.5, md: -3.2 }}>
-    {props.children}
-  </Text>
-)
-
-const ToolsWrapper = (props: ComponentProps) => (
-  <Flex alignItems={'center'} direction={{ base: 'column', md: 'row' }} padding={4}>
-    {props.children}
-  </Flex>
-)
-
-const ToolsLabel = (props: ComponentProps) => (
-  <Text
-    paddingLeft={{ md: 3 }}
-    paddingTop={{ base: 2 }}
-    fontWeight={'bold'}
-    fontSize={{ base: 12, md: 20 }}
-    letterSpacing={-1}>
-    {props.children}
-  </Text>
-)

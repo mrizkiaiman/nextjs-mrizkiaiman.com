@@ -1,8 +1,11 @@
+import { BLOG } from '@app/_config'
+
 export interface NavItem {
   label: string
   subLabel?: string
   children?: Array<NavItem>
   path: string
+  externalLink?: boolean
 }
 
 export const NAV_ITEMS: Array<NavItem> = [
@@ -12,16 +15,17 @@ export const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'About',
-    path: '#',
+    path: '/about',
   },
   {
     label: 'Projects',
     path: '#',
   },
-  // {
-  //   label: 'Blog',
-  //   path: '#',
-  // },
+  {
+    label: 'Blog',
+    path: BLOG,
+    externalLink: true,
+  },
   {
     label: 'Contact',
     path: '#',

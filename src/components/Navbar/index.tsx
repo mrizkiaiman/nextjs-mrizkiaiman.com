@@ -17,12 +17,12 @@ import Link from 'next/link'
 
 import { useRouter } from 'next/router'
 import { useColors } from '@utils/hooks/colors'
-import { ComponentProps } from '@type/ComponentProps'
-import { NAV_ITEMS, NavItem } from './_list'
+import { FCProps } from '@type/FCProps'
+import { NAV_ITEMS, NavItem } from './list'
 
-interface IPNavbar extends ComponentProps {}
+interface IPNavbar extends FCProps {}
 
-export const Navbar: React.FunctionComponent<IPNavbar> = props => {
+export const Navbar: React.FC<IPNavbar> = props => {
   const router = useRouter()
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onToggle } = useDisclosure()
@@ -30,12 +30,7 @@ export const Navbar: React.FunctionComponent<IPNavbar> = props => {
 
   return (
     <>
-      <Box
-        boxShadow={'base'}
-        display={'flex'}
-        width={{ base: '100%', md: '100%', sm: '100%' }}
-        justifyContent={'center'}
-        alignItems={'center'}>
+      <Box boxShadow={'base'} display={'flex'} width={'100%'} justifyContent={'center'} alignItems={'center'}>
         <Flex w={1200} justifyContent={'space-between'}>
           <Flex display={{ base: 'flex', md: 'none' }} pt={3} pb={3}>
             <Menu>
@@ -56,20 +51,30 @@ export const Navbar: React.FunctionComponent<IPNavbar> = props => {
               </MenuList>
             </Menu>
           </Flex>
-
           <Flex display={{ base: 'none', md: 'flex' }} pt={5} pb={5}>
             {NAV_ITEMS.map((item: NavItem, index: number) => {
-              return (
+              return item?.externalLink ? (
+                <a target={'_blank'} href={item.path} key={item?.label || index} rel="noopener noreferrer">
+                  <Text
+                    cursor={'pointer'}
+                    fontWeight="600"
+                    pl={5}
+                    pr={5}
+                    fontSize={16}
+                    color={router?.asPath === item.path ? activeAndHoverColor : defaultLinkColor}
+                    _hover={{ color: activeAndHoverColor }}>
+                    {item?.label || '-'}
+                  </Text>
+                </a>
+              ) : (
                 <Link href={item.path} key={item?.label || index} passHref>
                   <Text
-                    sx={{
-                      cursor: 'pointer',
-                      fontWeight: '600',
-                      paddingLeft: 5,
-                      paddingRight: 5,
-                      fontSize: 16,
-                      color: router?.asPath === item.path ? activeAndHoverColor : defaultLinkColor,
-                    }}
+                    cursor={'pointer'}
+                    fontWeight="600"
+                    pl={5}
+                    pr={5}
+                    fontSize={16}
+                    color={router?.asPath === item.path ? activeAndHoverColor : defaultLinkColor}
                     _hover={{ color: activeAndHoverColor }}>
                     {item?.label || '-'}
                   </Text>
