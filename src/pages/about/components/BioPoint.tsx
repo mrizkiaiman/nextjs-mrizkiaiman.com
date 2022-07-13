@@ -19,3 +19,5 @@ export const BioPoint = (props: BioPointProps) => {
     </Flex>
   )
 }
+
+export default BioPoint
