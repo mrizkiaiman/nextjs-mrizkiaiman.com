@@ -27,6 +27,6 @@
       "@hooks/*": ["src/utils/hooks/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "pages/**/*", "src/**/*"],
   "exclude": ["node_modules"]
 }
