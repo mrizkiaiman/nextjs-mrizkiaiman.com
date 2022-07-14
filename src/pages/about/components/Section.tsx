@@ -26,3 +26,5 @@ export const Section = (props: SectionProps) => {
     </Box>
   )
 }
+
+export default Section

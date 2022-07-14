@@ -10,12 +10,14 @@ export const BioPoint = (props: BioPointProps) => {
   const { year, description } = props
   return (
     <Flex mt={2}>
-      <Text fontSize={{ base: 16, md: 20 }} fontWeight={'bold'}>
+      <Text fontSize={{ base: 16, md: 18 }} fontWeight={'bold'}>
         {year}
       </Text>
-      <Text fontSize={{ base: 16, md: 20 }} paddingLeft={42}>
+      <Text fontSize={{ base: 16, md: 18 }} paddingLeft={42}>
         {description}
       </Text>
     </Flex>
   )
 }
+
+export default BioPoint

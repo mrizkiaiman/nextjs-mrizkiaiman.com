@@ -92,3 +92,5 @@ export const Navbar: React.FC<IPNavbar> = props => {
     </>
   )
 }
+
+export default Navbar
