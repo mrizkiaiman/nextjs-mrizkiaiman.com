@@ -1,13 +1,15 @@
+import * as React from 'react'
 import { Button, Center, Flex, Text, useColorModeValue, Link, Box } from '@chakra-ui/react'
 import { DefaultPage } from '@app/components/containers/DefaultPage'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { LINKED_IN, AVATAR, TOOLS, SLOGAN } from '@app/_config'
 
-import { useColors } from '@app/utils/hooks/colors'
+import { useColors } from '@app/utils/hooks/useColors'
 
 const Landing: React.FC = props => {
   const { activeAndHoverColor } = useColors()
+
   return (
     <DefaultPage headTitle="M. Rizki Aiman">
       <Flex paddingTop={{ base: 12, md: 0 }} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>

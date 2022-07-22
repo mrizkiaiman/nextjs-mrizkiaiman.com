@@ -1,7 +1,7 @@
 import { FCProps } from '@app/types/FCProps'
 import { Text, Box } from '@chakra-ui/react'
 
-import { useColors } from '@utils/hooks/colors'
+import { useColors } from '@app/utils/hooks/useColors'
 
 interface SectionProps extends FCProps {
   title: string

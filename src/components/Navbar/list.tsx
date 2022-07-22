@@ -1,4 +1,4 @@
-import { BLOG } from '@app/_config'
+import { BLOG, LINKED_IN } from '@app/_config'
 
 export interface NavItem {
   label: string
@@ -17,10 +17,10 @@ export const NAV_ITEMS: Array<NavItem> = [
     label: 'About',
     path: '/about',
   },
-  {
-    label: 'Projects',
-    path: '#',
-  },
+  // {
+  //   label: 'Projects',
+  //   path: '#',
+  // },
   {
     label: 'Blog',
     path: BLOG,
@@ -28,6 +28,7 @@ export const NAV_ITEMS: Array<NavItem> = [
   },
   {
     label: 'Contact',
-    path: '#',
+    path: LINKED_IN,
+    externalLink: true,
   },
 ]

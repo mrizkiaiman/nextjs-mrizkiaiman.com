@@ -16,7 +16,7 @@ import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRi
 import Link from 'next/link'
 
 import { useRouter } from 'next/router'
-import { useColors } from '@utils/hooks/colors'
+import { useColors } from '@app/utils/hooks/useColors'
 import { FCProps } from '@type/FCProps'
 import { NAV_ITEMS, NavItem } from './list'
 

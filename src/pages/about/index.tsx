@@ -5,8 +5,9 @@ import Image from 'next/image'
 import NextLink from 'next/link'
 import { BioPoint } from '@app/pages/about/components/BioPoint'
 import { AiOutlineTwitter, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 
-import { useColors } from '@app/utils/hooks/colors'
+import { useColors } from '@app/utils/hooks/useColors'
 import { LINKED_IN, TWITTER, INSTAGRAM, GITHUB, AVATAR_WITH_LAPTOP, FIRST_TITLE, SECOND_TITLE } from '@app/_config'
 
 export const About: React.FC = props => {

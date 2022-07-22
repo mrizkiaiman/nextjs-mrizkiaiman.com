@@ -1,6 +1,7 @@
 import { FCProps } from '@app/types/FCProps'
 import { Navbar } from '@app/components/Navbar'
 import { Flex, Box } from '@chakra-ui/react'
+import { motion } from 'framer-motion'
 
 import Head from 'next/head'
 
@@ -15,12 +16,13 @@ export const DefaultPage = (props: DefaultPageProps) => {
       <Head>
         <title>{headTitle}</title>
       </Head>
-      <Navbar />
-      <Flex width={'100%'} direction="column" justifyContent="center" alignItems={'center'}>
-        <Box width={{ base: '90%', md: 1000 }} alignSelf="center">
-          {children}
-        </Box>
-      </Flex>
+      <motion.div animate={{ y: [120, 0], opacity: [0.6, 1] }} transition={{ ease: 'backOut', duration: 1.5 }}>
+        <Flex width={'100%'} direction="column" justifyContent="center" alignItems={'center'}>
+          <Box width={{ base: '90%', md: 1000 }} alignSelf="center">
+            {children}
+          </Box>
+        </Flex>
+      </motion.div>
     </>
   )
 }
