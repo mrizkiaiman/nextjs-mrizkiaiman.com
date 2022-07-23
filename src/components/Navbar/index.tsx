@@ -12,8 +12,9 @@ import {
   MenuList,
   MenuItem,
 } from '@chakra-ui/react'
-import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon, ChevronDownIcon, ChevronRightIcon } from '@chakra-ui/icons'
+import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
+import { NavbarMenuMotion } from '@app/components/containers/animations/NavbarMenuMotion'
 
 import { useRouter } from 'next/router'
 import { useColors } from '@app/utils/hooks/useColors'
@@ -26,7 +27,7 @@ export const Navbar: React.FC<IPNavbar> = props => {
   const router = useRouter()
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onToggle } = useDisclosure()
-  const { defaultLinkColor, defaultLightAndDark, activeAndHoverColor } = useColors()
+  const { defaultLinkColor, defaultLightAndDark, activeAndHoverColor, containerButton } = useColors()
 
   return (
     <>
@@ -51,34 +52,43 @@ export const Navbar: React.FC<IPNavbar> = props => {
               </MenuList>
             </Menu>
           </Flex>
-          <Flex display={{ base: 'none', md: 'flex' }} pt={5} pb={5}>
+          <Flex display={{ base: 'none', md: 'flex' }} pt={2} pb={2}>
             {NAV_ITEMS.map((item: NavItem, index: number) => {
               return item?.externalLink ? (
                 <a target={'_blank'} href={item.path} key={item?.label || index} rel="noopener noreferrer">
-                  <Text
-                    cursor={'pointer'}
-                    fontWeight="600"
-                    pl={5}
-                    pr={5}
-                    fontSize={16}
-                    color={router?.asPath === item.path ? activeAndHoverColor : defaultLinkColor}
-                    _hover={{ color: activeAndHoverColor }}>
-                    {item?.label || '-'}
-                  </Text>
+                  <NavbarMenuMotion>
+                    <Text
+                      cursor={'pointer'}
+                      fontWeight="600"
+                      fontSize={16}
+                      py={'12px'}
+                      px={5}
+                      mx={'6px'}
+                      borderRadius={8}
+                      color={router?.asPath === item.path ? activeAndHoverColor : defaultLightAndDark}
+                      _hover={{ color: activeAndHoverColor, opacity: 1, backgroundColor: containerButton, fontWeight: 'bold' }}>
+                      {item?.label || '-'}
+                    </Text>
+                  </NavbarMenuMotion>
                 </a>
               ) : (
-                <Link href={item.path} key={item?.label || index} passHref>
-                  <Text
-                    cursor={'pointer'}
-                    fontWeight="600"
-                    pl={5}
-                    pr={5}
-                    fontSize={16}
-                    color={router?.asPath === item.path ? activeAndHoverColor : defaultLinkColor}
-                    _hover={{ color: activeAndHoverColor }}>
-                    {item?.label || '-'}
-                  </Text>
-                </Link>
+                <NavbarMenuMotion>
+                  <Link href={item.path} key={item?.label || index} passHref>
+                    <Text
+                      cursor={'pointer'}
+                      fontWeight={router?.asPath === item.path ? 'bold' : '600'}
+                      fontSize={16}
+                      py={'12px'}
+                      px={5}
+                      mx={'6px'}
+                      borderRadius={8}
+                      backgroundColor={router?.asPath === item.path ? containerButton : defaultLightAndDark}
+                      color={router?.asPath === item.path ? activeAndHoverColor : defaultLinkColor}
+                      _hover={{ color: activeAndHoverColor, opacity: 1, backgroundColor: containerButton, fontWeight: 'bold' }}>
+                      {item?.label || '-'}
+                    </Text>
+                  </Link>
+                </NavbarMenuMotion>
               )
             })}
           </Flex>

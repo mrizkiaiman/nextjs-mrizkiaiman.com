@@ -5,10 +5,10 @@ import Image from 'next/image'
 import NextLink from 'next/link'
 import { BioPoint } from '@app/pages/about/components/BioPoint'
 import { AiOutlineTwitter, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai'
-import { motion } from 'framer-motion'
+import { ButtonMotion } from '@app/components/containers/animations/ButtonMotion'
 
 import { useColors } from '@app/utils/hooks/useColors'
-import { LINKED_IN, TWITTER, INSTAGRAM, GITHUB, AVATAR_WITH_LAPTOP, FIRST_TITLE, SECOND_TITLE } from '@app/_config'
+import { LINKED_IN, TWITTER, INSTAGRAM, GITHUB, AVATAR_WITH_LAPTOP, FIRST_TITLE, SECOND_TITLE, BIO, INTERESTS, WORK } from '@app/_config'
 
 export const About: React.FC = props => {
   const { activeAndHoverColor } = useColors()
@@ -28,60 +28,43 @@ export const About: React.FC = props => {
           <Text color={activeAndHoverColor} fontWeight={'bold'} fontSize={{ base: 22, md: 30 }} letterSpacing={{ base: -1.2, md: -1.8 }}>
             {FIRST_TITLE} & {SECOND_TITLE}
           </Text>
-
-          {/* <NextLink href={LINKED_IN} passHref> */}
-          <Link style={{ textDecoration: 'none' }} isExternal>
-            <Button
-              width={{ base: '180px', md: '180px' }}
-              height={'54px'}
-              marginTop={8}
-              bg={useColorModeValue('black', 'white')}
-              _hover={{ bg: activeAndHoverColor, color: 'black' }}>
-              <Text fontWeight={'bold'} fontSize={16} color={useColorModeValue('white', 'black')}>
-                My Portfolio
-              </Text>
-            </Button>
-          </Link>
-          {/* </NextLink> */}
+          <ButtonMotion>
+            <Link style={{ textDecoration: 'none' }} isExternal>
+              <Button
+                width={{ base: '220px', md: '220px' }}
+                height={'64px'}
+                marginTop={8}
+                bg={useColorModeValue('black', 'white')}
+                _hover={{ bg: activeAndHoverColor, color: 'black' }}>
+                <Text fontWeight={'bold'} fontSize={20} color={useColorModeValue('white', 'black')}>
+                  My Portfolio
+                </Text>
+              </Button>
+            </Link>
+          </ButtonMotion>
         </Flex>
       </Flex>
       <Center>
         <Flex width={'80%'} direction={'column'} marginLeft={{ base: 4 }} marginRight={{ base: 4 }}>
           <Section title="Work">
             <Text fontSize={{ base: 16, md: 18 }} textAlign={'justify'} style={{ textIndent: '1em' }} pt={5}>
-              Rizki is a full-stack developer and a Notion creator based in Jakarta with a passion for building digital services and
-              products. He has different tooling-skills for solving real-life problems, either with Notion templates or code. Outside of his
-              profession, he loves spending time with his kindle, playing games, hangout with family and friends, and study about anything.
-              Currently, he is a full time employee as Senior Front-End Developer at start-up called Arvis.
+              {WORK}
             </Text>
           </Section>
           <Section title="Bio">
             <Box pt={5}>
-              <BioPoint year={1996} description="Born in Palembang, Indonesia" />
-              <BioPoint year={2016} description="Student Exchange - UTM in Johor Bahru, Malaysia" />
-              <BioPoint year={2019} description="Bachelor Degree - Universitas Sriwijaya in Palembang, Indonesia" />
-              <BioPoint year={2019} description="Graduate from Fullstack JavaScript Bootcamp - Hacktiv8 in Jakarta, Indonesia" />
-              <BioPoint year={2020} description="Mobile Developer - RestoDepot in Jakarta, Indonesia" />
-              <BioPoint year={2021} description={`Senior Front-End Developer - Arvis in Jakarta, Indonesia (present)`} />
+              {BIO.map((item, index) => (
+                <BioPoint key={item.description} year={item.year} description={item.description} />
+              ))}
             </Box>
           </Section>
           <Section title="Interests">
             <UnorderedList pt={5}>
-              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
-                Reading (Health, self-help, and other non-fiction books)
-              </ListItem>
-              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
-                Anime & Manga
-              </ListItem>
-              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
-                Games (YGO Master Duel & Mobile Legends)
-              </ListItem>
-              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
-                Writing
-              </ListItem>
-              <ListItem mt={2} fontSize={{ base: 16, md: 18 }}>
-                Notion enthusiast
-              </ListItem>
+              {INTERESTS.map((item, index) => (
+                <ListItem key={item.description} mt={2} fontSize={{ base: 16, md: 18 }}>
+                  {item.description}
+                </ListItem>
+              ))}
             </UnorderedList>
           </Section>
 
@@ -91,31 +74,31 @@ export const About: React.FC = props => {
                 <Flex alignItems={'center'} mt={2}>
                   <AiOutlineLinkedin color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={LINKED_IN} rel="noopener noreferrer">
-                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 20 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 18 }} color={activeAndHoverColor} cursor="pointer">
                       Muhammad Rizki Aiman
                     </Text>
                   </a>
                 </Flex>
-                <Flex alignItems={'center'} mt={5}>
+                <Flex alignItems={'center'} mt={3}>
                   <AiOutlineGithub color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={GITHUB} rel="noopener noreferrer">
-                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 20 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 18 }} color={activeAndHoverColor} cursor="pointer">
                       mrizkiaiman
                     </Text>
                   </a>
                 </Flex>
-                <Flex alignItems={'center'} mt={5}>
+                <Flex alignItems={'center'} mt={3}>
                   <AiOutlineTwitter color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={TWITTER} rel="noopener noreferrer">
-                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 20 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 18 }} color={activeAndHoverColor} cursor="pointer">
                       mrizkiaiman
                     </Text>
                   </a>
                 </Flex>
-                <Flex alignItems={'center'} mt={5}>
+                <Flex alignItems={'center'} mt={3}>
                   <AiOutlineInstagram color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={INSTAGRAM} rel="noopener noreferrer">
-                    <Text as="u" fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 20 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 18 }} color={activeAndHoverColor} cursor="pointer">
                       mrizkiaiman
                     </Text>
                   </a>

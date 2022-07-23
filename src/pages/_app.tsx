@@ -8,7 +8,7 @@ import { theme } from '@utils/theme'
 
 import { Loader } from '@components/Loader'
 import { Navbar } from '@components/Navbar'
-import { motion } from 'framer-motion'
+import { RenderPageMotion } from '@components/containers/animations/RenderPageMotion'
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [alreadyLoad, setAlreadyLoad] = React.useState<boolean>(false)
@@ -25,10 +25,10 @@ function MyApp({ Component, pageProps }: AppProps) {
         {alreadyLoad ? (
           <>
             <Navbar />
-            <motion.div animate={{ y: [80, 0], opacity: [0.5, 1] }} transition={{ ease: 'easeInOut', duration: 2 }}>
+            <RenderPageMotion>
               {/* @ts-ignore */}
               <Component {...pageProps} />
-            </motion.div>
+            </RenderPageMotion>
           </>
         ) : (
           <Loader />

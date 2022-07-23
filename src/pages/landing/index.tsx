@@ -4,6 +4,7 @@ import { DefaultPage } from '@app/components/containers/DefaultPage'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { LINKED_IN, AVATAR, TOOLS, SLOGAN } from '@app/_config'
+import { ButtonMotion } from '@app/components/containers/animations/ButtonMotion'
 
 import { useColors } from '@app/utils/hooks/useColors'
 
@@ -35,20 +36,23 @@ const Landing: React.FC = props => {
               textAlign={{ base: 'center', md: 'left' }}>
               {SLOGAN}
             </Text>
-            <NextLink href={LINKED_IN} passHref>
-              <Link style={{ textDecoration: 'none' }} isExternal>
-                <Button
-                  width={{ base: '180px', md: '220px' }}
-                  height={'54px'}
-                  marginTop={8}
-                  fontWeight={'bold'}
-                  fontSize={16}
-                  bg={useColorModeValue('black', 'white')}
-                  _hover={{ bg: activeAndHoverColor, color: 'black' }}>
-                  <Text color={useColorModeValue('white', 'black')}>Contact Me</Text>
-                </Button>
-              </Link>
-            </NextLink>
+            <ButtonMotion>
+              <NextLink href={LINKED_IN} passHref>
+                <Link style={{ textDecoration: 'none' }} isExternal>
+                  <Button
+                    width={{ base: '180px', md: '220px' }}
+                    height={{ base: '54px', md: '64px' }}
+                    marginTop={8}
+                    marginLeft={'4px'}
+                    fontWeight={'bold'}
+                    fontSize={{ base: 16, md: 20 }}
+                    bg={useColorModeValue('black', 'white')}
+                    _hover={{ bg: activeAndHoverColor, color: 'black' }}>
+                    <Text color={useColorModeValue('white', 'black')}>Contact Me</Text>
+                  </Button>
+                </Link>
+              </NextLink>
+            </ButtonMotion>
           </Flex>
           <Box marginRight={{ md: -40 }}>
             <Image alt="mrizkiaiman-avatar" src={AVATAR} width={550} height={550} />

@@ -12,12 +12,60 @@ export const FIRST_TITLE = 'Software Engineer'
 export const SECOND_TITLE = 'Notion Creator'
 export const SLOGAN = `Improving the business by building a web, mobile application, and notion system.`
 
-//VALUES POINT
-export const FIRST_VALUE_POINT = 'Keep things organized'
-export const SECOND_VALUE_POINT = 'Work is always documented'
-export const THIRD_VALUE_POINT = 'Define the problem first'
-export const FOURTH_VALUE_POINT = 'Try something new'
-export const FIFTH_VALUE_POINT = 'Learn from mistakes'
+//ABOUT
+export const WORK = `Rizki is a full-stack developer and a Notion creator based in Jakarta with a passion building digital products.
+                    He has different tooling-skills for solving real-life problems, like code, Notion templates, CMS, etc. Outside of his
+                    profession, he loves spending time with his kindle, playing games, hangout with family and friends, and study about anything in general.
+                    Currently, he is a full time employee as a Senior Front-End Developer at start-up called Arvis.`
+
+export const BIO = [
+  {
+    year: '1996',
+    description: 'Born in Palembang, Indonesia',
+  },
+  {
+    year: '2016',
+    description: 'Student Exchange - Universiti Teknologi Malaysia',
+  },
+  {
+    year: '2019',
+    description: 'Bachelor Degree - Universitas Sriwijaya',
+  },
+  {
+    year: '2019',
+    description: 'Fullstack JavaScript Bootcamp - Hacktiv8',
+  },
+  {
+    year: '2020',
+    description: 'Front-End Developer - RestoDepot',
+  },
+  {
+    year: '2021',
+    description: 'Front-End Developer - Arvis',
+  },
+  {
+    year: '2022',
+    description: 'Senior Front-End Developer - Arvis',
+  },
+]
+
+export const INTERESTS = [
+  {
+    description: `Learning about human's health in general`,
+  },
+  {
+    description: `Anime and Manga`,
+  },
+  {
+    description: 'Games (currently playing: Mobile Legends & YGO Master Duel)',
+  },
+  {
+    description: 'Platform called Notion',
+  },
+  {
+    description: 'Writing',
+  },
+]
 
 //TOOLS
 export const TOOLS = [
