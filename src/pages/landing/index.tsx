@@ -1,10 +1,12 @@
 import * as React from 'react'
+import { motion } from 'framer-motion'
 import { Button, Center, Flex, Text, useColorModeValue, Link, Box } from '@chakra-ui/react'
 import { DefaultPage } from '@app/components/containers/DefaultPage'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { LINKED_IN, AVATAR, TOOLS, SLOGAN } from '@app/_config'
 import { ButtonMotion } from '@app/components/containers/animations/ButtonMotion'
+import { AvatarMotion } from '@app/components/containers/animations/AvatarMotion'
 
 import { useColors } from '@app/utils/hooks/useColors'
 
@@ -54,9 +56,11 @@ const Landing: React.FC = props => {
               </NextLink>
             </ButtonMotion>
           </Flex>
-          <Box marginRight={{ md: -40 }}>
-            <Image alt="mrizkiaiman-avatar" src={AVATAR} width={550} height={550} />
-          </Box>
+          <AvatarMotion>
+            <Box marginRight={{ md: -40 }}>
+              <Image alt="mrizkiaiman-avatar" src={AVATAR} width={550} height={550} />
+            </Box>
+          </AvatarMotion>
         </Flex>
         {/* TOOLS */}
         <Center flexDirection={'column'}>

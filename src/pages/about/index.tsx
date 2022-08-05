@@ -6,6 +6,7 @@ import NextLink from 'next/link'
 import { BioPoint } from '@app/pages/about/components/BioPoint'
 import { AiOutlineTwitter, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai'
 import { ButtonMotion } from '@app/components/containers/animations/ButtonMotion'
+import { AvatarMotion } from '@app/components/containers/animations/AvatarMotion'
 
 import { useColors } from '@app/utils/hooks/useColors'
 import { LINKED_IN, TWITTER, INSTAGRAM, GITHUB, AVATAR_WITH_LAPTOP, FIRST_TITLE, SECOND_TITLE, BIO, INTERESTS, WORK } from '@app/_config'
@@ -20,7 +21,9 @@ export const About: React.FC = props => {
         direction={{ base: 'column', md: 'row' }}
         alignItems={'center'}
         justifyContent={{ base: 'center', md: 'space-between' }}>
-        <Image alt="mrizkiaiman-avatar" src={AVATAR_WITH_LAPTOP} width={550} height={550} />
+        <AvatarMotion direction="left">
+          <Image alt="mrizkiaiman-avatar" src={AVATAR_WITH_LAPTOP} width={550} height={550} />
+        </AvatarMotion>
         <Flex direction={'column'} width={{ base: '90%', md: '45%' }} marginLeft={{ md: -8 }}>
           <Text fontWeight={'bold'} fontSize={{ base: 28, md: 54 }} letterSpacing={-1.5}>
             M. Rizki Aiman

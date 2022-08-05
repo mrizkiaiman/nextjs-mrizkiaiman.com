@@ -14,7 +14,7 @@ import {
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
-import { NavbarMenuMotion } from '@app/components/containers/animations/NavbarMenuMotion'
+import { ButtonMotion } from '@app/components/containers/animations/ButtonMotion'
 
 import { useRouter } from 'next/router'
 import { useColors } from '@app/utils/hooks/useColors'
@@ -56,7 +56,7 @@ export const Navbar: React.FC<IPNavbar> = props => {
             {NAV_ITEMS.map((item: NavItem, index: number) => {
               return item?.externalLink ? (
                 <a target={'_blank'} href={item.path} key={item?.label || index} rel="noopener noreferrer">
-                  <NavbarMenuMotion>
+                  <ButtonMotion>
                     <Text
                       cursor={'pointer'}
                       fontWeight="600"
@@ -69,10 +69,10 @@ export const Navbar: React.FC<IPNavbar> = props => {
                       _hover={{ color: activeAndHoverColor, opacity: 1, backgroundColor: containerButton, fontWeight: 'bold' }}>
                       {item?.label || '-'}
                     </Text>
-                  </NavbarMenuMotion>
+                  </ButtonMotion>
                 </a>
               ) : (
-                <NavbarMenuMotion>
+                <ButtonMotion>
                   <Link href={item.path} key={item?.label || index} passHref>
                     <Text
                       cursor={'pointer'}
@@ -88,14 +88,16 @@ export const Navbar: React.FC<IPNavbar> = props => {
                       {item?.label || '-'}
                     </Text>
                   </Link>
-                </NavbarMenuMotion>
+                </ButtonMotion>
               )
             })}
           </Flex>
-          <Flex sx={{ paddingTop: 3 }}>
-            <Button bg={defaultLightAndDark} onClick={toggleColorMode}>
-              {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
-            </Button>
+          <Flex>
+            <ButtonMotion>
+              <Button bg={defaultLightAndDark} onClick={toggleColorMode}>
+                {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
+              </Button>
+            </ButtonMotion>
           </Flex>
         </Flex>
       </Box>
