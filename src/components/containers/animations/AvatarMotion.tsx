@@ -11,7 +11,7 @@ export const AvatarMotion: React.FC<AvatarMotionProps> = ({ children, direction 
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ x: animateX, opacity: [0, 0.2, 0.4, 0.6, 0.8, 1] }}
-      transition={{ ease: 'easeInOut', duration: 2 }}>
+      transition={{ ease: 'easeInOut', duration: 1.2 }}>
       {children}
     </motion.div>
   )
