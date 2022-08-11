@@ -1,9 +1,9 @@
-import { Text, Flex, Center } from '@chakra-ui/react'
+import { Text, Flex, Box } from '@chakra-ui/react'
 import { DefaultPage } from '@app/components/containers/DefaultPage'
 import { Section } from '@components/Section'
 import { ProjectCard } from '@app/pages/projects/project-card'
 
-import { PROJECTS_NOTION, PROJECTS_MOBILE_APP } from '@app/_config'
+import { PROJECTS_NOTION, PROJECTS_MOBILE_APP, PROJECTS_WEB } from '@app/_config'
 
 const Projects = () => {
   return (
@@ -25,7 +25,7 @@ const Projects = () => {
         </Text>
       </Flex>
       <Flex direction={'column'} pb={32} w={{ md: '1050px' }}>
-        <Section title="Mobile Application">
+        <Section title="Web Application">
           <Flex
             pt={{ md: 8 }}
             mt={{ base: -6 }}
@@ -33,24 +33,41 @@ const Projects = () => {
             justifyContent={{ base: 'center', md: 'flex-start' }}
             alignItems={{ base: 'center', md: 'flex-start' }}
             flexWrap="wrap">
-            {PROJECTS_MOBILE_APP.map((item, index) => (
+            {PROJECTS_WEB.map((item, index) => (
               <ProjectCard {...item} key={item.title} index={index} />
             ))}
           </Flex>
         </Section>
-        <Section title="Notion">
-          <Flex
-            justifyContent={{ base: 'center', md: 'flex-start' }}
-            alignItems={{ base: 'center', md: 'flex-start' }}
-            pt={{ md: 8 }}
-            mt={{ base: -6 }}
-            direction={{ base: 'column', md: 'row' }}
-            flexWrap="wrap">
-            {PROJECTS_NOTION.map((item, index) => (
-              <ProjectCard {...item} key={item.title} index={index} />
-            ))}
-          </Flex>
-        </Section>
+        <Box pt={{ md: 16 }}>
+          <Section title="Mobile Application">
+            <Flex
+              pt={{ md: 8 }}
+              mt={{ base: -6 }}
+              direction={{ base: 'column', md: 'row' }}
+              justifyContent={{ base: 'center', md: 'flex-start' }}
+              alignItems={{ base: 'center', md: 'flex-start' }}
+              flexWrap="wrap">
+              {PROJECTS_MOBILE_APP.map((item, index) => (
+                <ProjectCard {...item} key={item.title} index={index} />
+              ))}
+            </Flex>
+          </Section>
+        </Box>
+        <Box pt={{ md: 16 }}>
+          <Section title="Notion">
+            <Flex
+              justifyContent={{ base: 'center', md: 'flex-start' }}
+              alignItems={{ base: 'center', md: 'flex-start' }}
+              pt={{ md: 8 }}
+              mt={{ base: -6 }}
+              direction={{ base: 'column', md: 'row' }}
+              flexWrap="wrap">
+              {PROJECTS_NOTION.map((item, index) => (
+                <ProjectCard {...item} key={item.title} index={index} />
+              ))}
+            </Flex>
+          </Section>
+        </Box>
       </Flex>
     </DefaultPage>
   )

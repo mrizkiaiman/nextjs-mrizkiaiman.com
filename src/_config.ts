@@ -93,6 +93,17 @@ export const TOOLS = [
 ]
 
 //PROJECTS
+export const PROJECTS_WEB = [
+  {
+    title: 'Coca-cola VR',
+    description: `VR app which can display Nutrition Fact by pointing the Coca Cola 3D Object. Made with WebXR (react-xr).`,
+    tags: ['ReactJS', 'TypeScript', '@react-three/drei', '@react-three/xr'],
+    url: 'https://mrizkiaiman-cocacola-vr.vercel.app/',
+    image: '/images/projects/web-vr.png',
+    year: 2022,
+  },
+]
+
 export const PROJECTS_MOBILE_APP = [
   {
     title: 'Yarukoto',
