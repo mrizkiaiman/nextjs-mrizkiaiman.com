@@ -2,7 +2,6 @@ import { FCProps } from '@app/types/FCProps'
 import { Navbar } from '@app/components/Navbar'
 import { Flex, Box } from '@chakra-ui/react'
 import { motion } from 'framer-motion'
-import CommandK from '@components/CommandK'
 
 import Head from 'next/head'
 
@@ -23,7 +22,6 @@ export const DefaultPage = (props: DefaultPageProps) => {
       {isHomeOrAboutPage ? (
         <Flex width={'100%'} direction="column" justifyContent="center" alignItems={'center'}>
           <Box width={{ base: '90%', md: 1000 }} alignSelf="center">
-            {/* <CommandK /> */}
             {children}
           </Box>
         </Flex>
