@@ -16,3 +16,5 @@ export const AvatarMotion: React.FC<AvatarMotionProps> = ({ children, direction 
     </motion.div>
   )
 }
+
+export default AvatarMotion

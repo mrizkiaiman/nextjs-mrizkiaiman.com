@@ -52,3 +52,5 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, ta
     </Box>
   )
 }
+
+export default ProjectCard

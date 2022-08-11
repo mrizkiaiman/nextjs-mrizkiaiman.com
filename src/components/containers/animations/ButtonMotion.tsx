@@ -15,3 +15,5 @@ export const ButtonMotion: React.FC<ButtonMotionProps> = ({ children, whileHover
     </motion.button>
   )
 }
+
+export default ButtonMotion

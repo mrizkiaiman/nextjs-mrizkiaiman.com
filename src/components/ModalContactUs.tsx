@@ -47,3 +47,5 @@ export const ModalContactUs: React.FC<ModalContactUsProps> = ({ isOpen, onClose,
     </>
   )
 }
+
+export default ModalContactUs

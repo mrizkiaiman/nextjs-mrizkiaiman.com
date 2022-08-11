@@ -11,3 +11,5 @@ export const RenderPageMotion: React.FC<WithChildren> = ({ children }) => {
     </motion.div>
   )
 }
+
+export default RenderPageMotion

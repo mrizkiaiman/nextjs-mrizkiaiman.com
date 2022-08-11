@@ -37,3 +37,5 @@ export const DefaultPage = (props: DefaultPageProps) => {
     </>
   )
 }
+
+export default DefaultPage
