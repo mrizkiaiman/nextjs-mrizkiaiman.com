@@ -51,7 +51,7 @@ export const BIO = [
 
 export const INTERESTS = [
   {
-    description: `Learning about human's health in general`,
+    description: `Consume any new knowledge to expand my view`,
   },
   {
     description: `Anime and Manga`,
@@ -60,7 +60,7 @@ export const INTERESTS = [
     description: 'Games (currently playing: Mobile Legends & YGO Master Duel)',
   },
   {
-    description: 'Platform called Notion',
+    description: 'Notion and TickTick (love both platform!)',
   },
   {
     description: 'Writing',
@@ -70,15 +70,16 @@ export const INTERESTS = [
 //TOOLS
 export const TOOLS = [
   {
-    label: 'NextJS',
-    img: '/images/tools/nextjs.png',
-    whiteBorder: true,
-  },
-  {
     label: 'React',
     img: '/images/tools/react.png',
     whiteBorder: false,
   },
+  {
+    label: 'NextJS',
+    img: '/images/tools/nextjs.png',
+    whiteBorder: true,
+  },
+
   {
     label: 'Expo',
     img: '/images/tools/expo.png',
@@ -88,5 +89,52 @@ export const TOOLS = [
     label: 'Notion',
     img: '/images/tools/notion.png',
     whiteBorder: false,
+  },
+]
+
+//PROJECTS
+export const PROJECTS_MOBILE_APP = [
+  {
+    title: 'Yarukoto',
+    description: 'Animated to-do list, inspired by devaslife',
+    tags: ['React Native', 'Expo', 'TypeScript', 'Native Base', 'Moti', 'Re-animated'],
+    url: 'https://github.com/mrizkiaiman/react-native-yarukoto',
+    image: '/images/projects/mobile-yarukoto.png',
+    year: 2022,
+  },
+  {
+    title: 'Arvis - CRM',
+    description: 'Custom Relationship Management',
+    tags: ['React Native', 'TypeScript', 'Redux', 'Firebase', 'Branch.io'],
+    url: 'https://play.google.com/store/apps/details?id=arvis.app.android',
+    image: '/images/projects/mobile-crm.png',
+    year: 2021,
+  },
+  {
+    title: 'RestoDepot',
+    description: 'B2B E-Commerce for F&B Business',
+    tags: ['React Native', 'Redux', 'Firebase', 'Branch.io'],
+    url: '',
+    image: '/images/projects/mobile-restodepot.png',
+    year: 2020,
+  },
+]
+
+export const PROJECTS_NOTION = [
+  {
+    title: 'Expense Tracker',
+    description: 'Keep track of your finance',
+    tags: ['Notion'],
+    url: 'https://mrizkiaiman.gumroad.com/l/BkWAh',
+    image: '/images/projects/notion-expense-tracker.png',
+    year: 2021,
+  },
+  {
+    title: 'Weekly Habit Tracker',
+    description: 'Take control back of your life with a more organized habits',
+    tags: ['Notion'],
+    url: '',
+    image: '/images/projects/notion-habits-tracker.png',
+    year: 2021,
   },
 ]

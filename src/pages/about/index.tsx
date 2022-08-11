@@ -1,8 +1,8 @@
 import { Box, Button, Center, Flex, Text, useColorModeValue, Link, UnorderedList, ListItem } from '@chakra-ui/react'
-import { Section } from '@app/pages/about/components/Section'
+import { Section } from '@app/components/Section'
 import { DefaultPage } from '@app/components/containers/DefaultPage'
 import Image from 'next/image'
-import NextLink from 'next/link'
+import { useRouter } from 'next/router'
 import { BioPoint } from '@app/pages/about/components/BioPoint'
 import { AiOutlineTwitter, AiOutlineInstagram, AiOutlineLinkedin, AiOutlineGithub } from 'react-icons/ai'
 import { ButtonMotion } from '@app/components/containers/animations/ButtonMotion'
@@ -12,7 +12,12 @@ import { useColors } from '@app/utils/hooks/useColors'
 import { LINKED_IN, TWITTER, INSTAGRAM, GITHUB, AVATAR_WITH_LAPTOP, FIRST_TITLE, SECOND_TITLE, BIO, INTERESTS, WORK } from '@app/_config'
 
 export const About: React.FC = props => {
-  const { activeAndHoverColor } = useColors()
+  const { activeAndHoverColor, reverseDefaultColor } = useColors()
+  const router = useRouter()
+
+  const navigateToProjects = () => {
+    router.push('/projects')
+  }
 
   return (
     <DefaultPage headTitle="M. Rizki Aiman - About">
@@ -32,7 +37,7 @@ export const About: React.FC = props => {
             {FIRST_TITLE} & {SECOND_TITLE}
           </Text>
           <ButtonMotion>
-            <Link style={{ textDecoration: 'none' }} isExternal>
+            <Link style={{ textDecoration: 'none' }} onClick={navigateToProjects}>
               <Button
                 width={{ base: '220px', md: '220px' }}
                 height={'64px'}
@@ -48,7 +53,7 @@ export const About: React.FC = props => {
         </Flex>
       </Flex>
       <Center>
-        <Flex width={'80%'} direction={'column'} marginLeft={{ base: 4 }} marginRight={{ base: 4 }}>
+        <Flex width={{ base: '90%', md: '80%' }} direction={'column'} marginLeft={{ base: 4 }} marginRight={{ base: 4 }}>
           <Section title="Work">
             <Text fontSize={{ base: 16, md: 18 }} textAlign={'justify'} style={{ textIndent: '1em' }} pt={5}>
               {WORK}
@@ -77,7 +82,13 @@ export const About: React.FC = props => {
                 <Flex alignItems={'center'} mt={2}>
                   <AiOutlineLinkedin color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={LINKED_IN} rel="noopener noreferrer">
-                    <Text fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 18 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text
+                      _hover={{ color: activeAndHoverColor, opacity: 1 }}
+                      color={reverseDefaultColor}
+                      fontWeight={'bold'}
+                      ml={42}
+                      fontSize={{ base: 16, md: 18 }}
+                      cursor="pointer">
                       Muhammad Rizki Aiman
                     </Text>
                   </a>
@@ -85,7 +96,13 @@ export const About: React.FC = props => {
                 <Flex alignItems={'center'} mt={3}>
                   <AiOutlineGithub color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={GITHUB} rel="noopener noreferrer">
-                    <Text fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 18 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text
+                      fontWeight={'bold'}
+                      ml={42}
+                      fontSize={{ base: 16, md: 18 }}
+                      _hover={{ color: activeAndHoverColor, opacity: 1 }}
+                      color={reverseDefaultColor}
+                      cursor="pointer">
                       mrizkiaiman
                     </Text>
                   </a>
@@ -93,7 +110,13 @@ export const About: React.FC = props => {
                 <Flex alignItems={'center'} mt={3}>
                   <AiOutlineTwitter color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={TWITTER} rel="noopener noreferrer">
-                    <Text fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 18 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text
+                      fontWeight={'bold'}
+                      ml={42}
+                      fontSize={{ base: 16, md: 18 }}
+                      _hover={{ color: activeAndHoverColor, opacity: 1 }}
+                      color={reverseDefaultColor}
+                      cursor="pointer">
                       mrizkiaiman
                     </Text>
                   </a>
@@ -101,7 +124,13 @@ export const About: React.FC = props => {
                 <Flex alignItems={'center'} mt={3}>
                   <AiOutlineInstagram color={activeAndHoverColor} fontSize={32} />
                   <a target={'_blank'} href={INSTAGRAM} rel="noopener noreferrer">
-                    <Text fontWeight={'bold'} ml={42} fontSize={{ base: 16, md: 18 }} color={activeAndHoverColor} cursor="pointer">
+                    <Text
+                      fontWeight={'bold'}
+                      ml={42}
+                      fontSize={{ base: 16, md: 18 }}
+                      _hover={{ color: activeAndHoverColor, opacity: 1 }}
+                      color={reverseDefaultColor}
+                      cursor="pointer">
                       mrizkiaiman
                     </Text>
                   </a>

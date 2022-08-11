@@ -27,7 +27,7 @@ export const Navbar: React.FC<IPNavbar> = props => {
   const router = useRouter()
   const { colorMode, toggleColorMode } = useColorMode()
   const { isOpen, onToggle } = useDisclosure()
-  const { defaultLinkColor, defaultLightAndDark, activeAndHoverColor, containerButton } = useColors()
+  const { reverseDefaultColor, defaultLightAndDark, activeAndHoverColor, containerButton } = useColors()
 
   return (
     <>
@@ -83,7 +83,7 @@ export const Navbar: React.FC<IPNavbar> = props => {
                       mx={'6px'}
                       borderRadius={8}
                       backgroundColor={router?.asPath === item.path ? containerButton : defaultLightAndDark}
-                      color={router?.asPath === item.path ? activeAndHoverColor : defaultLinkColor}
+                      color={router?.asPath === item.path ? activeAndHoverColor : reverseDefaultColor}
                       _hover={{ color: activeAndHoverColor, opacity: 1, backgroundColor: containerButton, fontWeight: 'bold' }}>
                       {item?.label || '-'}
                     </Text>
@@ -94,7 +94,7 @@ export const Navbar: React.FC<IPNavbar> = props => {
           </Flex>
           <Flex>
             <ButtonMotion>
-              <Button bg={defaultLightAndDark} onClick={toggleColorMode}>
+              <Button bg={defaultLightAndDark} onClick={toggleColorMode} mr={{ base: 3, md: 0 }}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
             </ButtonMotion>

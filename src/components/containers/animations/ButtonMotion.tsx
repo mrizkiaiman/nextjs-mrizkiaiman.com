@@ -1,9 +1,16 @@
 import { WithChildren } from '@app/types/FCProps'
 import { motion } from 'framer-motion'
 
-export const ButtonMotion: React.FC<WithChildren> = ({ children }) => {
+interface ButtonMotionProps extends WithChildren {
+  whileHoverScale?: number
+  whileTapScale?: number
+}
+
+export const ButtonMotion: React.FC<ButtonMotionProps> = ({ children, whileHoverScale, whileTapScale }) => {
   return (
-    <motion.button whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>
+    <motion.button
+      whileHover={{ scale: whileHoverScale ? whileHoverScale : 1.1 }}
+      whileTap={{ scale: whileTapScale ? whileTapScale : 0.9 }}>
       {children}
     </motion.button>
   )
