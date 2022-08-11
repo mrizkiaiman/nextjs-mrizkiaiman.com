@@ -10,7 +10,7 @@ const Projects = () => {
     <DefaultPage headTitle="M. Rizki Aiman - Projects">
       <Flex direction={'column'} justifyContent="center" alignItems={'center'} py={{ md: 16 }} pt={{ base: 16, md: 28 }}>
         <Flex alignItems={'center'}>
-          <Image alt="avatar" src="/images/avatar-head-only.png" width={72} height={72} style={{ borderRadius: 100 }} />
+          <Image alt="avatar" src="/images/avatar-head-only.png" width={'72px'} height={'72px'} borderRadius="full" />
           <Text
             textAlign={{ md: 'center' }}
             fontSize={{ base: 28, md: 72 }}
