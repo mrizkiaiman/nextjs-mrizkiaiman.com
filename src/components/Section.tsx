@@ -1,7 +1,7 @@
 import { FCProps } from '@app/types/FCProps'
 import { Text, Box } from '@chakra-ui/react'
 
-import { useColors } from '@utils/hooks/colors'
+import { useColors } from '@app/utils/hooks/useColors'
 
 interface SectionProps extends FCProps {
   title: string
@@ -9,14 +9,14 @@ interface SectionProps extends FCProps {
 
 export const Section = (props: SectionProps) => {
   const { children, title } = props
-  const { defaultLinkColor } = useColors()
+  const { reverseDefaultColor } = useColors()
 
   return (
     <Box display="block" width={'100%'} pt={12}>
       <Text
         display={'inline'}
         borderBottom={'4px'}
-        borderColor={defaultLinkColor}
+        borderColor={reverseDefaultColor}
         style={{ marginTop: 12, fontWeight: 'bold' }}
         fontSize={{ base: 22, md: 32 }}
         letterSpacing={{ base: -1.2, md: -1.4 }}>

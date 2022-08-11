@@ -12,25 +12,74 @@ export const FIRST_TITLE = 'Software Engineer'
 export const SECOND_TITLE = 'Notion Creator'
 export const SLOGAN = `Improving the business by building a web, mobile application, and notion system.`
 
-//VALUES POINT
-export const FIRST_VALUE_POINT = 'Keep things organized'
-export const SECOND_VALUE_POINT = 'Work is always documented'
-export const THIRD_VALUE_POINT = 'Define the problem first'
-export const FOURTH_VALUE_POINT = 'Try something new'
-export const FIFTH_VALUE_POINT = 'Learn from mistakes'
+//ABOUT
+export const WORK = `Rizki is a full-stack developer and a Notion creator based in Jakarta with a passion building digital products.
+                    He has different tooling-skills for solving real-life problems, like code, Notion templates, CMS, etc. Outside of his
+                    profession, he loves spending time with his kindle, playing games, hangout with family and friends, and study about anything in general.
+                    Currently, he is a full time employee as a Senior Front-End Developer at start-up called Arvis.`
+
+export const BIO = [
+  {
+    year: '1996',
+    description: 'Born in Palembang, Indonesia',
+  },
+  {
+    year: '2016',
+    description: 'Student Exchange - Universiti Teknologi Malaysia',
+  },
+  {
+    year: '2019',
+    description: 'Bachelor Degree - Universitas Sriwijaya',
+  },
+  {
+    year: '2019',
+    description: 'Fullstack JavaScript Bootcamp - Hacktiv8',
+  },
+  {
+    year: '2020',
+    description: 'Front-End Developer - RestoDepot',
+  },
+  {
+    year: '2021',
+    description: 'Front-End Developer - Arvis',
+  },
+  {
+    year: '2022',
+    description: 'Senior Front-End Developer - Arvis',
+  },
+]
+
+export const INTERESTS = [
+  {
+    description: `Consume any new knowledge to expand my view`,
+  },
+  {
+    description: `Anime and Manga`,
+  },
+  {
+    description: 'Games (currently playing: Mobile Legends & YGO Master Duel)',
+  },
+  {
+    description: 'Notion and TickTick (love both platform!)',
+  },
+  {
+    description: 'Writing',
+  },
+]
 
 //TOOLS
 export const TOOLS = [
-  {
-    label: 'NextJS',
-    img: '/images/tools/nextjs.png',
-    whiteBorder: true,
-  },
   {
     label: 'React',
     img: '/images/tools/react.png',
     whiteBorder: false,
   },
+  {
+    label: 'NextJS',
+    img: '/images/tools/nextjs.png',
+    whiteBorder: true,
+  },
+
   {
     label: 'Expo',
     img: '/images/tools/expo.png',
@@ -40,5 +89,63 @@ export const TOOLS = [
     label: 'Notion',
     img: '/images/tools/notion.png',
     whiteBorder: false,
+  },
+]
+
+//PROJECTS
+export const PROJECTS_WEB = [
+  {
+    title: 'Coca-cola VR',
+    description: `VR app which can display Nutrition Fact by pointing the Coca Cola 3D Object. Made with WebXR (react-xr).`,
+    tags: ['ReactJS', 'TypeScript', '@react-three/drei', '@react-three/xr'],
+    url: 'https://mrizkiaiman-cocacola-vr.vercel.app/',
+    image: '/images/projects/web-vr.png',
+    year: 2022,
+  },
+]
+
+export const PROJECTS_MOBILE_APP = [
+  {
+    title: 'Yarukoto',
+    description: 'Animated to-do list, inspired by devaslife',
+    tags: ['React Native', 'Expo', 'TypeScript', 'Native Base', 'Moti', 'Re-animated'],
+    url: 'https://github.com/mrizkiaiman/react-native-yarukoto',
+    image: '/images/projects/mobile-yarukoto.png',
+    year: 2022,
+  },
+  {
+    title: 'Arvis - CRM',
+    description: 'Custom Relationship Management',
+    tags: ['React Native', 'TypeScript', 'Redux', 'Firebase', 'Branch.io'],
+    url: 'https://play.google.com/store/apps/details?id=arvis.app.android',
+    image: '/images/projects/mobile-crm.png',
+    year: 2021,
+  },
+  {
+    title: 'RestoDepot',
+    description: 'B2B E-Commerce for F&B Business',
+    tags: ['React Native', 'Redux', 'Firebase', 'Branch.io'],
+    url: '',
+    image: '/images/projects/mobile-restodepot.png',
+    year: 2020,
+  },
+]
+
+export const PROJECTS_NOTION = [
+  {
+    title: 'Expense Tracker',
+    description: 'Keep track of your finance',
+    tags: ['Notion'],
+    url: 'https://mrizkiaiman.gumroad.com/l/BkWAh',
+    image: '/images/projects/notion-expense-tracker.png',
+    year: 2021,
+  },
+  {
+    title: 'Weekly Habit Tracker',
+    description: 'Take control back of your life with a more organized habits',
+    tags: ['Notion'],
+    url: '',
+    image: '/images/projects/notion-habits-tracker.png',
+    year: 2021,
   },
 ]
