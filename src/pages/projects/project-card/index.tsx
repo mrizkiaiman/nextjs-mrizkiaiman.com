@@ -21,12 +21,24 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, ta
         {url ? (
           <a target={'_blank'} href={url} rel="noopener noreferrer">
             <Box boxShadow={'md'} borderRadius={'8px'}>
-              <Image src={image} height={{ base: 230, md: 310 }} width={{ base: 340, md: 475 }} style={{ borderRadius: 8 }} />
+              <Image
+                alt="project-image"
+                src={image}
+                height={{ base: 230, md: 310 }}
+                width={{ base: 340, md: 475 }}
+                style={{ borderRadius: 8 }}
+              />
             </Box>
           </a>
         ) : (
           <Box boxShadow={'md'} borderRadius={'8px'}>
-            <Image src={image} height={{ base: 230, md: 310 }} width={{ base: 340, md: 475 }} style={{ borderRadius: 8 }} />
+            <Image
+              alt="project-image"
+              src={image}
+              height={{ base: 230, md: 310 }}
+              width={{ base: 340, md: 475 }}
+              style={{ borderRadius: 8 }}
+            />
           </Box>
         )}
       </ButtonMotion>
@@ -40,13 +52,14 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, ta
         </HStack>
         <Text>{description}</Text>
         <Flex pt={2} w={{ base: 340, md: 475 }} flexWrap="wrap" justifyContent={'flex-start'}>
-          {tags.map((item, index) => (
-            <Center key={item} w={'102px'} borderRadius={4} mt={2} mr={2} py={1} bg={reverseDefaultColor}>
-              <Text fontSize={10} color={defaultColor} fontWeight="bold">
-                {item}
-              </Text>
-            </Center>
-          ))}
+          {tags ||
+            [].map((item, index) => (
+              <Center key={item} w={'102px'} borderRadius={4} mt={2} mr={2} py={1} bg={reverseDefaultColor}>
+                <Text fontSize={10} color={defaultColor} fontWeight="bold">
+                  {item}
+                </Text>
+              </Center>
+            ))}
         </Flex>
       </Box>
     </Box>

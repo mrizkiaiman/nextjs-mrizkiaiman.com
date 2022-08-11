@@ -1,4 +1,4 @@
-import { Text, Flex, Box } from '@chakra-ui/react'
+import { Text, Flex, Box, Image } from '@chakra-ui/react'
 import { DefaultPage } from '@app/components/containers/DefaultPage'
 import { Section } from '@components/Section'
 import { ProjectCard } from '@app/pages/projects/project-card'
@@ -10,7 +10,7 @@ const Projects = () => {
     <DefaultPage headTitle="M. Rizki Aiman - Projects">
       <Flex direction={'column'} justifyContent="center" alignItems={'center'} py={{ md: 16 }} pt={{ base: 16, md: 28 }}>
         <Flex alignItems={'center'}>
-          <img src="/images/avatar-head-only.png" width={72} height={72} style={{ borderRadius: 100 }} />
+          <Image alt="avatar" src="/images/avatar-head-only.png" width={72} height={72} style={{ borderRadius: 100 }} />
           <Text
             textAlign={{ md: 'center' }}
             fontSize={{ base: 28, md: 72 }}
