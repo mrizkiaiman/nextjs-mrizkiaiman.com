@@ -1,5 +1,5 @@
 import { useColors } from '@app/utils/hooks/useColors'
-import { Box, Text, Center, HStack, Flex, Image } from '@chakra-ui/react'
+import { Box, Text, Center, HStack, Flex, Image, Skeleton } from '@chakra-ui/react'
 import { ButtonMotion } from '@app/components/containers/animations/ButtonMotion'
 
 interface ProjectCardProps {
@@ -10,6 +10,7 @@ interface ProjectCardProps {
   image?: string
   index: number
   year: number
+  type?: string
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, tags, image, url, index, year }) => {
@@ -22,6 +23,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, ta
           <a target={'_blank'} href={url} rel="noopener noreferrer">
             <Box boxShadow={'md'} borderRadius={'8px'}>
               <Image
+                fallback={<Skeleton height={{ base: 230, md: 310 }} width={{ base: 340, md: 475 }} borderRadius={8} />}
                 alt="project-image"
                 src={image}
                 height={{ base: 230, md: 310 }}
@@ -33,6 +35,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, ta
         ) : (
           <Box boxShadow={'md'} borderRadius={'8px'}>
             <Image
+              fallback={<Skeleton height={{ base: 230, md: 310 }} width={{ base: 340, md: 475 }} borderRadius={8} />}
               alt="project-image"
               src={image}
               height={{ base: 230, md: 310 }}

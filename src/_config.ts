@@ -71,23 +71,23 @@ export const INTERESTS = [
 export const TOOLS = [
   {
     label: 'React',
-    img: '/images/tools/react.png',
+    img: '/images/tools/react.webp',
     whiteBorder: false,
   },
   {
     label: 'NextJS',
-    img: '/images/tools/nextjs.png',
+    img: '/images/tools/nextjs.webp',
     whiteBorder: true,
   },
 
   {
     label: 'Expo',
-    img: '/images/tools/expo.png',
+    img: '/images/tools/expo.webp',
     whiteBorder: true,
   },
   {
     label: 'Notion',
-    img: '/images/tools/notion.png',
+    img: '/images/tools/notion.webp',
     whiteBorder: false,
   },
 ]
@@ -95,6 +95,7 @@ export const TOOLS = [
 //PROJECTS
 export const PROJECTS_WEB = [
   {
+    type: 'web',
     title: 'Coca-cola VR',
     description: `VR app which can display Nutrition Fact by pointing the Coca Cola 3D Object. Made with WebXR (react-xr).`,
     tags: ['ReactJS', 'TypeScript', '@react-three/drei', '@react-three/xr'],
@@ -106,6 +107,7 @@ export const PROJECTS_WEB = [
 
 export const PROJECTS_MOBILE_APP = [
   {
+    type: 'mobile-app',
     title: 'Yarukoto',
     description: 'Animated to-do list, inspired by devaslife',
     tags: ['React Native', 'Expo', 'TypeScript', 'Native Base', 'Moti', 'Re-animated'],
@@ -114,6 +116,7 @@ export const PROJECTS_MOBILE_APP = [
     year: 2022,
   },
   {
+    type: 'mobile-app',
     title: 'Arvis - CRM',
     description: 'Custom Relationship Management',
     tags: ['React Native', 'TypeScript', 'Redux', 'Firebase', 'Branch.io'],
@@ -122,6 +125,7 @@ export const PROJECTS_MOBILE_APP = [
     year: 2021,
   },
   {
+    type: 'mobile-app',
     title: 'RestoDepot',
     description: 'B2B E-Commerce for F&B Business',
     tags: ['React Native', 'Redux', 'Firebase', 'Branch.io'],
@@ -133,6 +137,7 @@ export const PROJECTS_MOBILE_APP = [
 
 export const PROJECTS_NOTION = [
   {
+    type: 'notion',
     title: 'Expense Tracker',
     description: 'Keep track of your finance',
     tags: ['Notion'],
@@ -141,6 +146,7 @@ export const PROJECTS_NOTION = [
     year: 2021,
   },
   {
+    type: 'notion',
     title: 'Weekly Habit Tracker',
     description: 'Take control back of your life with a more organized habits',
     tags: ['Notion'],

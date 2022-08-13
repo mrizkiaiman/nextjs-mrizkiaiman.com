@@ -58,7 +58,7 @@ const Landing: React.FC = props => {
           </Flex>
           <AvatarMotion>
             <Box marginRight={{ md: -40 }}>
-              <Image alt="mrizkiaiman-avatar" src={AVATAR} width={550} height={550} />
+              <Image alt="mrizkiaiman-avatar" src={AVATAR} width={550} height={550} priority />
             </Box>
           </AvatarMotion>
         </Flex>

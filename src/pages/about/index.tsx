@@ -27,7 +27,7 @@ export const About: React.FC = props => {
         alignItems={'center'}
         justifyContent={{ base: 'center', md: 'space-between' }}>
         <AvatarMotion direction="left">
-          <Image alt="mrizkiaiman-avatar" src={AVATAR_WITH_LAPTOP} width={550} height={550} />
+          <Image alt="mrizkiaiman-avatar" src={AVATAR_WITH_LAPTOP} width={550} height={550} priority />
         </AvatarMotion>
         <Flex direction={'column'} width={{ base: '90%', md: '45%' }} marginLeft={{ md: -8 }}>
           <Text fontWeight={'bold'} fontSize={{ base: 28, md: 54 }} letterSpacing={-1.5}>
