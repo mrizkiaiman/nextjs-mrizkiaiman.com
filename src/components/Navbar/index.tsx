@@ -72,8 +72,8 @@ export const Navbar: React.FC<IPNavbar> = props => {
                   </ButtonMotion>
                 </a>
               ) : (
-                <Link href={item.path} key={item?.label || index} passHref>
-                  <ButtonMotion>
+                <ButtonMotion key={item?.label || index}>
+                  <Link href={item.path} key={item?.label || index} passHref>
                     <Text
                       cursor={'pointer'}
                       fontWeight={router?.asPath === item.path ? 'bold' : '600'}
@@ -87,8 +87,8 @@ export const Navbar: React.FC<IPNavbar> = props => {
                       _hover={{ color: activeAndHoverColor, opacity: 1, backgroundColor: containerButton, fontWeight: 'bold' }}>
                       {item?.label || '-'}
                     </Text>
-                  </ButtonMotion>
-                </Link>
+                  </Link>
+                </ButtonMotion>
               )
             })}
           </Flex>
