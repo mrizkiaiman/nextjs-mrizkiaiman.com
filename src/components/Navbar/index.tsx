@@ -94,7 +94,7 @@ export const Navbar: React.FC<IPNavbar> = props => {
           </Flex>
           <Flex>
             <ButtonMotion>
-              <Button bg={defaultLightAndDark} onClick={toggleColorMode} mr={{ base: 3, md: 0 }}>
+              <Button aria-label="change-theme-mode" bg={defaultLightAndDark} onClick={toggleColorMode} mr={{ base: 3, md: 0 }}>
                 {colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
               </Button>
             </ButtonMotion>
