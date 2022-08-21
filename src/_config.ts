@@ -158,7 +158,7 @@ export const PROJECTS_NOTION = [
     title: 'Expense Tracker',
     description: 'Keep track of your finance',
     tags: ['Notion'],
-    url: 'https://mrizkiaiman.gumroad.com/l/BkWAh',
+    url: '',
     image: '/images/projects/notion-expense-tracker.webp',
     year: 2021,
   },
