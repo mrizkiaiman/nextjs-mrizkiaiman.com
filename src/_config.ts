@@ -9,7 +9,7 @@ export const AVATAR_WITH_LAPTOP = '/images/avatar-full-laptop.svg'
 
 //LANDING
 export const FIRST_TITLE = 'Software Engineer'
-export const SECOND_TITLE = 'Notion Creator'
+export const SECOND_TITLE = 'Platform Builder'
 export const SLOGAN = `Improving the business by building a web, mobile application, and notion system.`
 
 //ABOUT
@@ -79,7 +79,6 @@ export const TOOLS = [
     img: '/images/tools/nextjs.webp',
     whiteBorder: true,
   },
-
   {
     label: 'Expo',
     img: '/images/tools/expo.webp',
@@ -101,6 +100,15 @@ export const PROJECTS_WEB = [
     tags: ['ReactJS', 'TypeScript', '@react-three/drei', '@react-three/xr'],
     url: 'https://mrizkiaiman-cocacola-vr.vercel.app/',
     image: '/images/projects/web-vr.webp',
+    year: 2022,
+  },
+  {
+    type: 'web',
+    title: 'Coca-cola AR',
+    description: `AR app which can display Nutrition Fact by pointing the Coca Cola Real Object to your camera's device. Made with JavaScript.`,
+    tags: ['JavaScript'],
+    url: 'https://mrizkiaiman-cocacola-ar.vercel.app/',
+    image: '/images/projects/web-ar.webp',
     year: 2022,
   },
 ]
