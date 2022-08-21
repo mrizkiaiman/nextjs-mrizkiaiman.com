@@ -146,6 +146,15 @@ export const PROJECTS_MOBILE_APP = [
 export const PROJECTS_NOTION = [
   {
     type: 'notion',
+    title: 'Blog',
+    description: 'Built with the dashboard that can control your blog post',
+    tags: ['Notion'],
+    url: '',
+    image: '/images/projects/notion-blog.webp',
+    year: 2022,
+  },
+  {
+    type: 'notion',
     title: 'Expense Tracker',
     description: 'Keep track of your finance',
     tags: ['Notion'],
