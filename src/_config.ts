@@ -97,7 +97,7 @@ export const PROJECTS_WEB = [
     type: 'web',
     title: 'AimanCorp - Business Site',
     description: `Professional Business Site. Inspired by devaslife and margelo.io design.`,
-    tags: ['ReactJS', 'TypeScript', 'TailwindCSS'],
+    tags: ['ReactJS', 'NextJS', 'TypeScript', 'TailwindCSS'],
     url: 'https://aimancorp.mrizkiaiman.com/',
     image: '/images/projects/web-aimancorp.webp',
     year: 2022,
