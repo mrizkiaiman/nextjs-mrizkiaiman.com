@@ -95,6 +95,15 @@ export const TOOLS = [
 export const PROJECTS_WEB = [
   {
     type: 'web',
+    title: 'AimanCorp - Business Site',
+    description: `Professional Business Site. Inspired by devaslife and margelo.io design.`,
+    tags: ['ReactJS', 'TypeScript', 'TailwindCSS'],
+    url: 'https://aimancorp.mrizkiaiman.com/',
+    image: '/images/projects/web-aimancorp.webp',
+    year: 2022,
+  },
+  {
+    type: 'web',
     title: 'Coca-cola VR',
     description: `VR app which can display Nutrition Fact by pointing the Coca Cola 3D Object. Made with WebXR (react-xr).`,
     tags: ['ReactJS', 'TypeScript', '@react-three/drei', '@react-three/xr'],
@@ -117,7 +126,7 @@ export const PROJECTS_MOBILE_APP = [
   {
     type: 'mobile-app',
     title: 'Yarukoto',
-    description: 'Animated to-do list, inspired by devaslife',
+    description: 'Animated to-do list, inspired by devaslife.',
     tags: ['React Native', 'Expo', 'TypeScript', 'Native Base', 'Moti', 'Re-animated'],
     url: 'https://github.com/mrizkiaiman/react-native-yarukoto',
     image: '/images/projects/mobile-yarukoto.webp',
@@ -135,7 +144,7 @@ export const PROJECTS_MOBILE_APP = [
   {
     type: 'mobile-app',
     title: 'Arvis - CRM',
-    description: 'Custom Relationship Management',
+    description: 'Custom Relationship Management with rich features.',
     tags: ['React Native', 'TypeScript', 'Redux', 'Firebase', 'Branch.io'],
     url: 'https://play.google.com/store/apps/details?id=arvis.app.android',
     image: '/images/projects/mobile-crm.webp',
@@ -144,7 +153,7 @@ export const PROJECTS_MOBILE_APP = [
   {
     type: 'mobile-app',
     title: 'RestoDepot',
-    description: 'B2B E-Commerce for F&B Business',
+    description: 'B2B E-Commerce for F&B Business.',
     tags: ['React Native', 'Redux', 'Firebase', 'Branch.io'],
     url: '',
     image: '/images/projects/mobile-restodepot.webp',
@@ -156,7 +165,7 @@ export const PROJECTS_NOTION = [
   {
     type: 'notion',
     title: 'Blog',
-    description: 'Built with the dashboard that can control your blog post',
+    description: 'Built with the dashboard that can control your blog post.',
     tags: ['Notion'],
     url: '',
     image: '/images/projects/notion-blog.webp',
@@ -165,7 +174,7 @@ export const PROJECTS_NOTION = [
   {
     type: 'notion',
     title: 'Expense Tracker',
-    description: 'Keep track of your finance',
+    description: 'Keep track of your finance.',
     tags: ['Notion'],
     url: '',
     image: '/images/projects/notion-expense-tracker.webp',
@@ -174,7 +183,7 @@ export const PROJECTS_NOTION = [
   {
     type: 'notion',
     title: 'Weekly Habit Tracker',
-    description: 'Take control back of your life with a more organized habits',
+    description: 'Take control back of your life with a more organized habits.',
     tags: ['Notion'],
     url: '',
     image: '/images/projects/notion-habits-tracker.webp',
