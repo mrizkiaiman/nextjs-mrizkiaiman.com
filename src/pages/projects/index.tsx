@@ -25,7 +25,7 @@ const Projects = () => {
         </Text>
       </Flex>
       <Flex direction={'column'} pb={32} w={{ md: '1050px' }}>
-        <Section title="Web Application">
+        <Section title="Web Platform">
           <Flex
             pt={{ md: 8 }}
             mt={{ base: -6 }}
@@ -39,7 +39,7 @@ const Projects = () => {
           </Flex>
         </Section>
         <Box pt={{ md: 16 }}>
-          <Section title="Mobile Application">
+          <Section title="Mobile Platform">
             <Flex
               pt={{ md: 8 }}
               mt={{ base: -6 }}
@@ -54,7 +54,7 @@ const Projects = () => {
           </Section>
         </Box>
         <Box pt={{ md: 16 }}>
-          <Section title="Notion">
+          <Section title="Notion Templates">
             <Flex
               justifyContent={{ base: 'center', md: 'flex-start' }}
               alignItems={{ base: 'center', md: 'flex-start' }}
