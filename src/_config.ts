@@ -1,3 +1,9 @@
+export const SEO_CONTENT_LANDING = {
+  title: 'M. Rizki Aiman',
+  description: `Muhammad Rizki Aiman's main website. It contains my works, portfolio, and resume.`,
+  keywords: `Muhamamd Rizki Aiman, M. Rizki Aiman, Rizki, Aiman, mrizkiaiman, Iki, Nezo Ravizen, Ashirogi, freelance, web, mobile, notion, product, digital, service, portfolio, works`,
+}
+
 export const LINKED_IN = 'https://www.linkedin.com/in/mrizkiaiman/'
 export const BLOG = 'https://mrizkiaiman.medium.com/'
 export const GITHUB = 'https://github.com/mrizkiaiman'
@@ -40,12 +46,8 @@ export const BIO = [
     description: 'Front-End Developer - RestoDepot',
   },
   {
-    year: '2021',
+    year: '2021 - Present',
     description: 'Front-End Developer - Arvis',
-  },
-  {
-    year: '2022',
-    description: 'Senior Front-End Developer - Arvis',
   },
 ]
 
@@ -105,7 +107,7 @@ export const PROJECTS_WEB = [
   {
     type: 'web',
     title: 'Coca-cola VR',
-    description: `VR app which can display Nutrition Fact by pointing the Coca Cola 3D Object. Made with WebXR (react-xr).`,
+    description: `VR app which can display Nutrition Fact by pointing the Coca Cola 3D object. Made with WebXR (react-xr).`,
     tags: ['ReactJS', 'TypeScript', '@react-three/drei', '@react-three/xr'],
     url: 'https://webvr.mrizkiaiman.com/',
     image: '/images/projects/web-vr.webp',
@@ -114,7 +116,7 @@ export const PROJECTS_WEB = [
   {
     type: 'web',
     title: 'Coca-cola AR',
-    description: `AR app which can display Nutrition Fact by pointing the Coca Cola Real Object to your camera's device. Made with JavaScript.`,
+    description: `AR app which can display Nutrition Fact by pointing the Coca Cola real object to your camera's device. Made with JavaScript.`,
     tags: ['JavaScript'],
     url: 'https://webar.mrizkiaiman.com/',
     image: '/images/projects/web-ar.webp',
@@ -144,7 +146,7 @@ export const PROJECTS_MOBILE_APP = [
   {
     type: 'mobile-app',
     title: 'Arvis - CRM',
-    description: 'Custom Relationship Management with rich features.',
+    description: 'Custom Relationship Management app with rich features.',
     tags: ['React Native', 'TypeScript', 'Redux', 'Firebase', 'Branch.io'],
     url: 'https://play.google.com/store/apps/details?id=arvis.app.android',
     image: '/images/projects/mobile-crm.webp',
