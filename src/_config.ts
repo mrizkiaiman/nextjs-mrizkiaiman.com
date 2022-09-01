@@ -22,7 +22,7 @@ export const SLOGAN = `Improving the business by building a web, mobile applicat
 export const WORK = `Rizki is a full-stack developer and a Notion creator based in Jakarta with a passion building digital products.
                     He has different tooling-skills for solving real-life problems, like with code, Notion templates, CMS, etc. Outside of his
                     profession, he loves spending time with his kindle, playing games, hangout with family and friends, and study about anything in general.
-                    Currently, he is a full time employee as a Senior Front-End Developer at start-up called Arvis.`
+                    Currently, he is a full time employee as a Front-End Developer at start-up called Arvis.`
 
 export const BIO = [
   {
