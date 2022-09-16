@@ -12,7 +12,7 @@ interface DefaultPageProps extends FCProps {
 export const DefaultPage = (props: DefaultPageProps) => {
   const { children, headTitle } = props
 
-  const isHomeOrAboutPage = headTitle === 'M. Rizki Aiman' || headTitle === 'M. Rizki Aiman - About'
+  const isHomeOrAboutPage = headTitle === 'M. Rizki Aiman - Platform Builder' || headTitle === 'M. Rizki Aiman - About'
 
   return (
     <>

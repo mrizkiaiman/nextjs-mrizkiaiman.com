@@ -1,5 +1,5 @@
 export const SEO_CONTENT_LANDING = {
-  title: 'M. Rizki Aiman',
+  title: 'M. Rizki Aiman - Platform Builder',
   description: `Muhammad Rizki Aiman's main website. It contains my works, portfolio, and resume.`,
   keywords: `Muhamamd Rizki Aiman, M. Rizki Aiman, Rizki, Aiman, mrizkiaiman, Iki, Nezo Ravizen, Ashirogi, freelance, web, mobile, notion, product, digital, service, portfolio, works`,
 }
@@ -11,6 +11,7 @@ export const BLOG = 'https://mrizkiaiman.medium.com/'
 export const GITHUB = 'https://github.com/mrizkiaiman'
 export const TWITTER = 'https://twitter.com/mrizkiaiman'
 export const INSTAGRAM = 'https://www.instagram.com/mrizkiaiman/'
+export const STORE = 'https://store.mrizkiaiman.com/'
 
 export const AVATAR = '/images/avatar-full.svg'
 export const AVATAR_WITH_LAPTOP = '/images/avatar-full-laptop.svg'

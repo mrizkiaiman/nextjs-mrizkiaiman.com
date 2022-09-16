@@ -18,7 +18,7 @@ const Landing: React.FC = props => {
   return (
     <>
       <SEO title={SEO_CONTENT_LANDING.title} description={SEO_CONTENT_LANDING.description} keywords={SEO_CONTENT_LANDING.keywords} />
-      <DefaultPage headTitle="M. Rizki Aiman">
+      <DefaultPage headTitle={SEO_CONTENT_LANDING.title}>
         <Flex paddingTop={{ base: 12, md: 0 }} flexDirection={'column'} justifyContent={'center'} alignItems={'center'}>
           <Flex
             p={{ base: 4 }}
@@ -27,7 +27,7 @@ const Landing: React.FC = props => {
             justifyContent={{ base: 'center', md: 'space-between' }}>
             <Flex
               direction={'column'}
-              width={{ md: '50%' }}
+              width={{ md: '60%' }}
               justifyContent={{ base: 'center', md: 'flex-start' }}
               alignItems={{ base: 'center', md: 'flex-start' }}>
               <Text fontWeight={'bold'} fontSize={{ base: 28, md: 54 }} letterSpacing={{ base: -1.5, md: -1.8 }}>
