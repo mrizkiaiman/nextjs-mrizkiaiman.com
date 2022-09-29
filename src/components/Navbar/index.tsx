@@ -59,7 +59,7 @@ export const Navbar: React.FC<IPNavbar> = props => {
                 <a target={'_blank'} href={item.path} key={item?.label || index} rel="noopener noreferrer">
                   <ButtonMotion>
                     <>
-                      {item.label === 'Digital Products' && (
+                      {item.label === 'Store' && (
                         <Image
                           src="/icons/new.svg"
                           alt="new-icon"
@@ -70,7 +70,7 @@ export const Navbar: React.FC<IPNavbar> = props => {
                           marginTop={-2}
                         />
                       )}
-                      {item.label === 'Digital Products' ? (
+                      {item.label === 'Store' ? (
                         <Text
                           cursor={'pointer'}
                           fontWeight="bold"

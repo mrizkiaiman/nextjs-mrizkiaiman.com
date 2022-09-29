@@ -33,7 +33,7 @@ export const NAV_ITEMS: Array<NavItem> = [
     externalLink: true,
   },
   {
-    label: 'Digital Products',
+    label: 'Store',
     path: STORE,
     externalLink: true,
   },

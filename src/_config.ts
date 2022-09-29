@@ -4,8 +4,6 @@ export const SEO_CONTENT_LANDING = {
   keywords: `Muhamamd Rizki Aiman, M. Rizki Aiman, Rizki, Aiman, mrizkiaiman, Iki, Nezo Ravizen, Ashirogi, freelance, web, mobile, notion, product, digital, service, portfolio, works`,
 }
 
-export const PIRSCH_CODE = '0KPAZkEI7L39yO1VDa19VpdxG0n5Qg2B'
-
 export const LINKED_IN = 'https://www.linkedin.com/in/mrizkiaiman/'
 export const BLOG = 'https://mrizkiaiman.medium.com/'
 export const GITHUB = 'https://github.com/mrizkiaiman'
