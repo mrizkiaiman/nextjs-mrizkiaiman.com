@@ -1,5 +1,5 @@
 export const SEO_CONTENT_LANDING = {
-  title: 'M. Rizki Aiman - Platform Builder',
+  title: 'M. Rizki Aiman - Software Engineer',
   description: `Muhammad Rizki Aiman's main website. It contains my works, portfolio, and resume.`,
   keywords: `Muhamamd Rizki Aiman, M. Rizki Aiman, Rizki, Aiman, mrizkiaiman, Iki, Nezo Ravizen, Ashirogi, freelance, web, mobile, notion, product, digital, service, portfolio, works`,
 }
@@ -16,13 +16,13 @@ export const AVATAR_WITH_LAPTOP = '/images/avatar-full-laptop.svg'
 
 //LANDING
 export const FIRST_TITLE = 'Software Engineer'
-export const SECOND_TITLE = 'Platform Builder'
-export const SLOGAN = `Improving the business by building a web, mobile application, and notion system.`
+export const SECOND_TITLE = 'Notion Creator'
+export const SLOGAN = `Improving the business and productivity by building a web, mobile application, and Notion system.`
 
 //ABOUT
 export const WORK = `Rizki is a full-stack developer and a Notion creator based in Jakarta with a passion building digital products.
                     He has different tooling-skills for solving real-life problems, like with code, Notion templates, CMS, etc. Outside of his
-                    profession, he loves spending time with his kindle, playing games, hangout with family and friends, and study about anything in general.
+                    profession, he loves spending time with his kindle, playing games, hangout with family and friends, and study about human behavior, health, and self-growth.
                     Currently, he is a full time employee as a Front-End Developer at start-up called Arvis.`
 
 export const BIO = [
@@ -60,6 +60,9 @@ export const INTERESTS = [
     description: 'Notion, TickTick, and Raycast (my holy trinity system!)',
   },
   {
+    description: `Reading books (mostly non-fiction)`,
+  },
+  {
     description: `Anime and manga`,
   },
   {
@@ -76,6 +79,10 @@ export const TOOLS = [
     label: 'React',
     img: '/images/tools/react.webp',
     whiteBorder: false,
+  },
+  {
+    label: 'TypeScript',
+    img: '/images/tools/typescript.webp',
   },
   {
     label: 'NextJS',

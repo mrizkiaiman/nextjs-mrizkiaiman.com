@@ -71,12 +71,12 @@ const Landing: React.FC = props => {
             <Text fontSize={18} fontWeight={'900'} letterSpacing={-1} color={useColorModeValue('black', 'white')} paddingBottom={3}>
               TOOLS
             </Text>
-            <Flex>
+            <Flex flexWrap={'wrap'} justifyContent="center">
               {TOOLS.map((tool, index) => (
                 <Flex alignItems={'center'} direction={{ base: 'column', md: 'row' }} padding={4} key={tool.label}>
                   {tool.whiteBorder ? (
                     <Center bg={'white'} padding={0.5} borderRadius={100}>
-                      <Image alt={tool.label} src={tool.img} width={50} height={50} layout="fixed" />
+                      <Image alt={tool.label} src={tool.img} width={46} height={46} layout="fixed" />
                     </Center>
                   ) : (
                     <Image alt={tool.label} src={tool.img} width={50} height={50} layout="fixed" />
@@ -85,7 +85,7 @@ const Landing: React.FC = props => {
                     paddingLeft={{ md: 3 }}
                     paddingTop={{ base: 2 }}
                     fontWeight={'bold'}
-                    fontSize={{ base: 12, md: 20 }}
+                    fontSize={{ base: 14, md: 20 }}
                     letterSpacing={-1}>
                     {tool.label}
                   </Text>
