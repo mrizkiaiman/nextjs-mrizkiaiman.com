@@ -53,7 +53,7 @@ const Projects = () => {
             </Flex>
           </Section>
         </Box>
-        <Box pt={{ md: 16 }}>
+        {/* <Box pt={{ md: 16 }}>
           <Section title="Notion Templates">
             <Flex
               justifyContent={{ base: 'center', md: 'flex-start' }}
@@ -67,7 +67,7 @@ const Projects = () => {
               ))}
             </Flex>
           </Section>
-        </Box>
+        </Box> */}
       </Flex>
     </DefaultPage>
   )

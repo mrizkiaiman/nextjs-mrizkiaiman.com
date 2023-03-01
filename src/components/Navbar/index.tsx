@@ -11,6 +11,7 @@ import {
   MenuButton,
   MenuList,
   MenuItem,
+  Image,
 } from '@chakra-ui/react'
 import { MoonIcon, SunIcon, HamburgerIcon, CloseIcon } from '@chakra-ui/icons'
 import Link from 'next/link'
@@ -52,23 +53,51 @@ export const Navbar: React.FC<IPNavbar> = props => {
               </MenuList>
             </Menu>
           </Flex>
-          <Flex display={{ base: 'none', md: 'flex' }} pt={2} pb={2}>
+          <Flex display={{ base: 'none', md: 'flex' }} py={4}>
             {NAV_ITEMS.map((item: NavItem, index: number) => {
               return item?.externalLink ? (
                 <a target={'_blank'} href={item.path} key={item?.label || index} rel="noopener noreferrer">
                   <ButtonMotion>
-                    <Text
-                      cursor={'pointer'}
-                      fontWeight="600"
-                      fontSize={16}
-                      py={'12px'}
-                      px={5}
-                      mx={'6px'}
-                      borderRadius={8}
-                      color={router?.asPath === item.path ? activeAndHoverColor : defaultLightAndDark}
-                      _hover={{ color: activeAndHoverColor, opacity: 1, backgroundColor: containerButton, fontWeight: 'bold' }}>
-                      {item?.label || '-'}
-                    </Text>
+                    <>
+                      {item.label === 'Store' && (
+                        <Image
+                          src="/icons/new.svg"
+                          alt="new-icon"
+                          height={6}
+                          width={6}
+                          position="absolute"
+                          marginRight={18}
+                          marginTop={-2}
+                        />
+                      )}
+                      {item.label === 'Store' ? (
+                        <Text
+                          cursor={'pointer'}
+                          fontWeight="bold"
+                          fontSize={16}
+                          py={'12px'}
+                          px={5}
+                          mx={'6px'}
+                          borderRadius={8}
+                          backgroundColor={'orange.200'}
+                          color={'black'}>
+                          {item?.label || '-'}
+                        </Text>
+                      ) : (
+                        <Text
+                          cursor={'pointer'}
+                          fontWeight="600"
+                          fontSize={16}
+                          py={'12px'}
+                          px={5}
+                          mx={'6px'}
+                          borderRadius={8}
+                          color={router?.asPath === item.path ? activeAndHoverColor : defaultLightAndDark}
+                          _hover={{ color: activeAndHoverColor, opacity: 1, backgroundColor: containerButton, fontWeight: 'bold' }}>
+                          {item?.label || '-'}
+                        </Text>
+                      )}
+                    </>
                   </ButtonMotion>
                 </a>
               ) : (
